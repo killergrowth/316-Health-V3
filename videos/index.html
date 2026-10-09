@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-full-color-32.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-full-color-16.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-grey-32.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-grey-16.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="/images/favicon-full-color-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Insurance Video Library | 316 Health Insurance</title>
+<meta name="description" content="Watch short educational videos from the 316 Health Insurance team. Real answers to the questions we hear every day, no jargon.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://316healthins.com/videos/">
+<!-- SCHEMA:WebPage -->
+<!-- SCHEMA:BreadcrumbList -->
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/responsive.css" rel="stylesheet">
+
+
+<style>
+/* ── Video Hub Styles ── */
+.video-hub-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.video-hub-filter-btn {
+  padding: 8px 20px;
+  border: 2px solid #2C4187;
+  background: transparent;
+  color: #2C4187;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.video-hub-filter-btn.active,
+.video-hub-filter-btn:hover {
+  background: #2C4187;
+  color: #fff;
+}
+/* outer wrapper, no grid here, just a block container */
+.video-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.video-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.video-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,.13);
+  transform: translateY(-2px);
+}
+.video-card-thumb {
+  position: relative;
+  background: #1e3070;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.video-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.video-card-thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2C4187 0%, #1e3070 100%);
+  min-height: 160px;
+}
+.video-card-thumb-placeholder i {
+  font-size: 48px;
+  color: rgba(255,255,255,.5);
+}
+.video-card-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.3);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.video-card:hover .video-card-play {
+  opacity: 1;
+}
+.video-card-play-icon {
+  width: 52px;
+  height: 52px;
+  background: #2C4187;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-card-play-icon i {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 4px;
+}
+.video-card-duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,.75);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.video-card-body {
+  padding: 18px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.video-card-category {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2C4187;
+  margin-bottom: 6px;
+}
+.video-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a2a3a;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.video-card-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 14px;
+}
+.video-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2C4187;
+  text-decoration: none;
+}
+.video-card-link:hover {
+  color: #2C4187;
+}
+.video-hub-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+}
+.video-hub-empty i {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+  color: #ccc;
+}
+@media (max-width: 1024px) {
+  .video-hub-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .video-hub-grid { grid-template-columns: 1fr; }
+}
+</style>
+<script>window.__VIDEOS_DATA__ = [
+  {
+    "id": "aca-penalty-explained",
+    "title": "The ACA Penalty: Why Health Insurance Coverage Matters",
+    "category": "tips",
+    "filename": "1.mp4",
+    "transcript": "content/transcripts/1.txt",
+    "description": "When the ACA passed in 2010, it penalized people without qualified health coverage. Here's why that matters and how the system actually works.",
+    "thumbnail": "/assets/video/thumbnails/aca-penalty-explained.jpg",
+    "duration": "",
+    "dateAdded": "2026-05-29",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-penalty-explained.mp4"
+  },
+  {
+    "id": "open-enrollment-checklist-2026",
+    "title": "Open Enrollment Checklist: What to Have Ready for 2026",
+    "category": "tips",
+    "filename": "7 - Enrollment.mp4",
+    "transcript": "content/transcripts/7 - Enrollment.txt",
+    "description": "A quick checklist of everything you need before navigating ACA open enrollment for 2026  —  starting with who's on your tax return.",
+    "thumbnail": "/assets/video/thumbnails/open-enrollment-checklist-2026.jpg",
+    "duration": "",
+    "dateAdded": "2026-05-29",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/open-enrollment-checklist-2026.mp4"
+  },
+  {
+    "id": "higher-income-aca-subsidies-2026",
+    "title": "Higher Income & ACA Subsidies: What to Know for 2026",
+    "category": "tips",
+    "filename": "9 - Nerves.mp4",
+    "transcript": "content/transcripts/9 - Nerves.txt",
+    "description": "If you're a higher income earner who's been using ACA subsidies and feeling nervous about 2026, here are ideas to ease the uncertainty.",
+    "thumbnail": "/assets/video/thumbnails/higher-income-aca-subsidies-2026.jpg",
+    "duration": "",
+    "dateAdded": "2026-05-29",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/higher-income-aca-subsidies-2026.mp4"
+  },
+  {
+    "id": "why-independent-brokers-make-a-difference",
+    "title": "Why Independent Brokers Make a Difference",
+    "category": "tips",
+    "filename": "Advisors 1.mp4",
+    "transcript": "content/transcripts/Advisors 1.txt",
+    "description": "Frustrated with the broken health insurance system? Our advisors are here to give you the experience you actually want  —  and to serve every community.",
+    "thumbnail": "/assets/video/thumbnails/why-independent-brokers-make-a-difference.jpg",
+    "duration": "",
+    "dateAdded": "2026-05-29",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/why-independent-brokers-make-a-difference.mp4"
+  },
+  {
+    "id": "meet-the-316-team",
+    "title": "Meet the 316 Health Insurance Team",
+    "category": "team",
+    "filename": "Advisors 2.mp4",
+    "transcript": "content/transcripts/Advisors 2.txt",
+    "description": "316 Health Insurance is built on a culture where advisors genuinely support each other  —  and that makes all the difference for clients.",
+    "thumbnail": "/assets/video/thumbnails/meet-the-316-team.jpg",
+    "duration": "",
+    "dateAdded": "2026-05-29",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/meet-the-316-team.mp4"
+  },
+  {
+    "id": "health-insurance-changes-2026-dont-panic",
+    "title": "Big Health Insurance Changes in 2026  —  Don't Panic",
+    "category": "tips",
+    "filename": "S - Don't Panic.mp4",
+    "transcript": "content/transcripts/S - Don't Panic.txt",
+    "description": "Big changes are coming in health insurance in 2026  —  but the ACA isn't going anywhere. Here's what you actually need to know.",
+    "thumbnail": "/assets/video/thumbnails/health-insurance-changes-2026-dont-panic.jpg",
+    "duration": "",
+    "dateAdded": "2026-05-29",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/health-insurance-changes-2026-dont-panic.mp4"
+  },
+  {
+    "id": "meet-vanesa-barnard",
+    "title": "Meet Vanesa Barnard, Health Insurance Advisor",
+    "category": "team",
+    "filename": "Vanesa Barnard.mp4",
+    "transcript": "content/transcripts/Vanesa Barnard.txt",
+    "description": "Vanesa joins 316 Health Insurance to help individuals and families navigate the complicated world of health coverage with clarity and care.",
+    "thumbnail": "/assets/video/thumbnails/meet-vanesa-barnard.jpg",
+    "duration": "",
+    "dateAdded": "2026-05-29",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/meet-vanesa-barnard.mp4"
+  },
+  {
+    "id": "why-small-businesses-choose-316-health-insurance",
+    "title": "Why Small Businesses Choose 316 Health Insurance",
+    "category": "general",
+    "filename": "1 - Just Like You.mp4",
+    "transcript": "content/transcripts/1 - Just Like You.txt",
+    "description": "Discover why small businesses trust 316 Health Insurance. We understand your challenges because we're a small business too, offering tailored solutions for companies under 25 employees.",
+    "thumbnail": "/assets/video/thumbnails/why-small-businesses-choose-316-health-insurance.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/why-small-businesses-choose-316-health-insurance.mp4"
+  },
+  {
+    "id": "why-316-health-insurance-is-different-from-other-agencies",
+    "title": "Why 316 Health Insurance Is Different From Other Agencies",
+    "category": "general",
+    "filename": "2 - We Dont Sell.mp4",
+    "transcript": "content/transcripts/2 - We Dont Sell.txt",
+    "description": "Learn how 316 Health Insurance approaches client relationships differently — focusing on education and problem-solving rather than sales tactics.",
+    "thumbnail": "/assets/video/thumbnails/why-316-health-insurance-is-different-from-other-agencies.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/why-316-health-insurance-is-different-from-other-agencies.mp4"
+  },
+  {
+    "id": "uninsured-how-to-access-healthcare-without-insurance",
+    "title": "Uninsured? How to Access Healthcare Without Insurance",
+    "category": "general",
+    "filename": "2.mp4",
+    "transcript": "content/transcripts/2.txt",
+    "description": "Learn how uninsured individuals can still access healthcare through cash pay models and price comparison tools like MDSave and Fair Market Health.",
+    "thumbnail": "/assets/video/thumbnails/uninsured-how-to-access-healthcare-without-insurance.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/uninsured-how-to-access-healthcare-without-insurance.mp4"
+  },
+  {
+    "id": "navigating-healthcare-without-insurance-cash-based-options",
+    "title": "Navigating Healthcare Without Insurance: Cash-Based Options",
+    "category": "aca",
+    "filename": "3 - Dropping HI.mp4",
+    "driveFileId": "1rIdzJAqTuri5a5Kg7qc8xF3SQzjTMgIT",
+    "transcript": "content/transcripts/3 - Dropping HI.txt",
+    "description": "Explore how to access affordable care without health insurance using cash-based pricing and negotiated rates with providers.",
+    "thumbnail": "/assets/video/thumbnails/navigating-healthcare-without-insurance-cash-based-options.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/navigating-healthcare-without-insurance-cash-based-options.mp4"
+  },
+  {
+    "id": "what-happens-if-you-miss-a-health-insurance-payment",
+    "title": "What Happens If You Miss a Health Insurance Payment?",
+    "category": "general",
+    "filename": "3 - Uninsured.mp4",
+    "driveFileId": "1uoCPGwJlHgt9jVxut2ZzMoHvsg3y9A0W",
+    "transcript": "content/transcripts/3 - Uninsured.txt",
+    "description": "Learn about grace periods and what happens when you miss your health insurance payment. 316 Health Insurance explains coverage lapses and reinstatement.",
+    "thumbnail": "/assets/video/thumbnails/what-happens-if-you-miss-a-health-insurance-payment.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/what-happens-if-you-miss-a-health-insurance-payment.mp4"
+  },
+  {
+    "id": "health-savings-accounts-high-deductible-plans-explained",
+    "title": "Health Savings Accounts & High Deductible Plans Explained",
+    "category": "aca",
+    "filename": "4 - HSA.mp4",
+    "driveFileId": "15dDvkzSfEkJX39LY-oLq2LMbg3uZqQU3",
+    "transcript": "content/transcripts/4 - HSA.txt",
+    "description": "Learn how pairing an HSA with a high deductible bronze plan can reduce taxes and save money on healthcare costs in 2026.",
+    "thumbnail": "/assets/video/thumbnails/health-savings-accounts-high-deductible-plans-explained.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/health-savings-accounts-high-deductible-plans-explained.mp4"
+  },
+  {
+    "id": "2026-aca-subsidy-changes-what-you-need-to-know",
+    "title": "2026 ACA Subsidy Changes: What You Need to Know",
+    "category": "aca",
+    "filename": "4 - Subsidies.mp4",
+    "driveFileId": "1UnTl8DpUnbQTJuaNeC5_CMZzDNjTsWsk",
+    "transcript": "content/transcripts/4 - Subsidies.txt",
+    "description": "Learn how new federal subsidy repayment rules for 2026 could affect your ACA coverage. Understand the risks of misapplying subsidies.",
+    "thumbnail": "/assets/video/thumbnails/2026-aca-subsidy-changes-what-you-need-to-know.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/2026-aca-subsidy-changes-what-you-need-to-know.mp4"
+  },
+  {
+    "id": "health-insurance-help-after-loss-of-a-spouse",
+    "title": "Health Insurance Help After Loss of a Spouse",
+    "category": "general",
+    "filename": "5 - Death_1.mp4",
+    "driveFileId": "1GwNa8J3fDmqe7uX_Owkio4ApzH9x1jLi",
+    "transcript": "content/transcripts/5 - Death_1.txt",
+    "description": "Learn how 316 Health Insurance helps clients navigate coverage changes after losing a spouse. We guide you through next steps with care and dignity.",
+    "thumbnail": "/assets/video/thumbnails/health-insurance-help-after-loss-of-a-spouse.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/health-insurance-help-after-loss-of-a-spouse.mp4"
+  },
+  {
+    "id": "aca-subsidies-changing-in-2026-what-you-need-to-know",
+    "title": "ACA Subsidies Changing in 2026: What You Need to Know",
+    "category": "aca",
+    "filename": "5 - Good Position.mp4",
+    "driveFileId": "1IQEEZTDFYkAmyBlS2tS-ARahBGVUt8j6",
+    "transcript": "content/transcripts/5 - Good Position.txt",
+    "description": "Obamacare isn't expiring in 2026 — enhanced subsidies are. Learn what's actually changing and how to prepare for the new plan year.",
+    "thumbnail": "/assets/video/thumbnails/aca-subsidies-changing-in-2026-what-you-need-to-know.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-subsidies-changing-in-2026-what-you-need-to-know.mp4"
+  },
+  {
+    "id": "broker-advocacy-service-navigating-health-insurance",
+    "title": "Broker Advocacy Service: Expert Help Navigating Health Insurance",
+    "category": "general",
+    "filename": "6 - Clarity.mp4",
+    "driveFileId": "1n3LPWWcIplsS8QfQ0V5xePNWwjYLg79q",
+    "transcript": "content/transcripts/6 - Clarity.txt",
+    "description": "Learn how 316 Health Insurance's Broker Advocacy Service provides expert guidance to help you navigate complex health insurance options and maximize your coverage.",
+    "thumbnail": "/assets/video/thumbnails/broker-advocacy-service-navigating-health-insurance.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/broker-advocacy-service-navigating-health-insurance.mp4"
+  },
+  {
+    "id": "health-insurance-myths-why-you-ll-still-pay-out-of-pocket",
+    "title": "Health Insurance Myths: Why You'll Still Pay Out of Pocket",
+    "category": "general",
+    "filename": "6 - Understanding HI.mp4",
+    "driveFileId": "1He7hi-79TpzcCrWVEzBMn-Z0m45POOEd",
+    "transcript": "content/transcripts/6 - Understanding HI.txt",
+    "description": "Learn why health insurance doesn't cover every healthcare cost. Understand what your plan actually covers and manage expectations wisely.",
+    "thumbnail": "/assets/video/thumbnails/health-insurance-myths-why-you-ll-still-pay-out-of-pocket.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/health-insurance-myths-why-you-ll-still-pay-out-of-pocket.mp4"
+  },
+  {
+    "id": "aca-premium-shock-here-s-how-to-rethink-your-strategy",
+    "title": "ACA Premium Shock? Here's How to Rethink Your Strategy",
+    "category": "aca",
+    "filename": "7 - Rethink.mp4",
+    "driveFileId": "1_bVdMLmPRh5p1WKKRM1jxWejbi9PxJ4V",
+    "transcript": "content/transcripts/7 - Rethink.txt",
+    "description": "Premiums jumping for 2026? Learn how 316 Health Insurance helps families find affordable coverage options during ACA open enrollment.",
+    "thumbnail": "/assets/video/thumbnails/aca-premium-shock-here-s-how-to-rethink-your-strategy.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-premium-shock-here-s-how-to-rethink-your-strategy.mp4"
+  },
+  {
+    "id": "what-is-aca-open-enrollment-a-beginner-s-guide",
+    "title": "What is ACA Open Enrollment? A Beginner's Guide",
+    "category": "aca",
+    "filename": "8 - ACA.mp4",
+    "driveFileId": "1D8v45TR0JjZlr7N_BBuleANpkfdRgdDm",
+    "transcript": "content/transcripts/8 - ACA.txt",
+    "description": "Learn about ACA open enrollment, when it happens, and how to enroll. Understand the 45-day window and life-changing events that qualify you.",
+    "thumbnail": "/assets/video/thumbnails/what-is-aca-open-enrollment-a-beginner-s-guide.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/what-is-aca-open-enrollment-a-beginner-s-guide.mp4"
+  },
+  {
+    "id": "beyond-politics-finding-health-insurance-solutions-that-work",
+    "title": "Beyond Politics: Finding Health Insurance Solutions That Work",
+    "category": "general",
+    "filename": "8 - Youtube Followers.mp4",
+    "driveFileId": "1__bU9SLXurxJFUZVjjwcmBnHgEJBaJZ5",
+    "transcript": "content/transcripts/8 - Youtube Followers.txt",
+    "description": "Health insurance shouldn't be about politics. Learn how strategic risk pooling and access to care can solve real problems for everyone.",
+    "thumbnail": "/assets/video/thumbnails/beyond-politics-finding-health-insurance-solutions-that-work.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/beyond-politics-finding-health-insurance-solutions-that-work.mp4"
+  },
+  {
+    "id": "retire-early-without-working-for-health-insurance",
+    "title": "Retire Early Without Working for Health Insurance",
+    "category": "medicare",
+    "filename": "Jason - Approaching Retirement.mp4",
+    "transcript": "content/transcripts/Jason - Approaching Retirement.txt",
+    "description": "Don't stay in your job just for health insurance. Learn how to plan ahead and bridge coverage from early retirement to Medicare at 65.",
+    "thumbnail": "/assets/video/thumbnails/retire-early-without-working-for-health-insurance.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/retire-early-without-working-for-health-insurance.mp4"
+  },
+  {
+    "id": "aca-subsidy-changes-in-2026-what-you-need-to-know",
+    "title": "ACA Subsidy Changes in 2026: What You Need to Know",
+    "category": "aca",
+    "filename": "Jason - Solving HI Problems.mp4",
+    "transcript": "content/transcripts/Jason - Solving HI Problems.txt",
+    "description": "Learn why health insurance premiums are rising in 2026 as enhanced COVID subsidies expire. Understanding the ACA changes can help you make informed decisions.",
+    "thumbnail": "/assets/video/thumbnails/aca-subsidy-changes-in-2026-what-you-need-to-know.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-subsidy-changes-in-2026-what-you-need-to-know.mp4"
+  },
+  {
+    "id": "aca-open-enrollment-45-days-to-enroll-nov-1-dec-15",
+    "title": "ACA Open Enrollment: 45 Days to Enroll (Nov 1-Dec 15)",
+    "category": "aca",
+    "filename": "S - 45 Days.mp4",
+    "transcript": "content/transcripts/S - 45 Days.txt",
+    "description": "Learn about the 2024 ACA open enrollment period and the 45-day window to select your health plan. Don't wait — be proactive and prepared.",
+    "thumbnail": "/assets/video/thumbnails/aca-open-enrollment-45-days-to-enroll-nov-1-dec-15.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-open-enrollment-45-days-to-enroll-nov-1-dec-15.mp4"
+  },
+  {
+    "id": "missed-open-enrollment-you-still-have-options",
+    "title": "Missed Open Enrollment? You Still Have Options",
+    "category": "aca",
+    "filename": "S - ACA.mp4",
+    "transcript": "content/transcripts/S - ACA.txt",
+    "description": "Learn what to do if you missed open enrollment or a special enrollment period. 316 Health Insurance explains alternative coverage options available to you.",
+    "thumbnail": "/assets/video/thumbnails/missed-open-enrollment-you-still-have-options.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/missed-open-enrollment-you-still-have-options.mp4"
+  },
+  {
+    "id": "2026-aca-changes-don-t-lose-your-federal-subsidies",
+    "title": "2026 ACA Changes: Don't Lose Your Federal Subsidies",
+    "category": "aca",
+    "filename": "S - Approaching 2026.mp4",
+    "transcript": "content/transcripts/S - Approaching 2026.txt",
+    "description": "Learn why you can't auto-enroll in your ACA plan for 2026. Verify your income and household size to keep your federal subsidies.",
+    "thumbnail": "/assets/video/thumbnails/2026-aca-changes-don-t-lose-your-federal-subsidies.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/2026-aca-changes-don-t-lose-your-federal-subsidies.mp4"
+  },
+  {
+    "id": "one-big-beautiful-bill-what-changes-for-aca-health-insurance",
+    "title": "One Big Beautiful Bill: What Changes for ACA Health Insurance",
+    "category": "aca",
+    "filename": "S - Big Bill.mp4",
+    "transcript": "content/transcripts/S - Big Bill.txt",
+    "description": "Learn how the One Big Beautiful Bill Act affects your ACA coverage. Discover what's really changing regarding cost-sharing reductions and eligibility.",
+    "thumbnail": "/assets/video/thumbnails/one-big-beautiful-bill-what-changes-for-aca-health-insurance.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/one-big-beautiful-bill-what-changes-for-aca-health-insurance.mp4"
+  },
+  {
+    "id": "keep-your-doctor-out-of-network-options-explained",
+    "title": "Keep Your Doctor Out of Network: Options Explained",
+    "category": "tips",
+    "filename": "S - Doc Networks.mp4",
+    "transcript": "content/transcripts/S - Doc Networks.txt",
+    "description": "Learn how to keep seeing your preferred doctor even if they're out of network, and explore cost-saving strategies.",
+    "thumbnail": "/assets/video/thumbnails/keep-your-doctor-out-of-network-options-explained.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/keep-your-doctor-out-of-network-options-explained.mp4"
+  },
+  {
+    "id": "direct-primary-care-health-insurance-do-you-need-both",
+    "title": "Direct Primary Care + Health Insurance: Do You Need Both?",
+    "category": "general",
+    "filename": "S - DPC.mp4",
+    "transcript": "content/transcripts/S - DPC.txt",
+    "description": "Learn how direct primary care memberships work alongside health insurance. Discover why you need both for complete healthcare coverage and affordability.",
+    "thumbnail": "/assets/video/thumbnails/direct-primary-care-health-insurance-do-you-need-both.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/direct-primary-care-health-insurance-do-you-need-both.mp4"
+  },
+  {
+    "id": "immigrant-health-insurance-aca-subsidies-your-benefits",
+    "title": "Immigrant Health Insurance: ACA Subsidies & Your Benefits",
+    "category": "aca",
+    "filename": "S - Immigrants.mp4",
+    "transcript": "content/transcripts/S - Immigrants.txt",
+    "description": "Learn how lawfully present immigrants can access ACA subsidies and coverage. Green card holders, refugees, asylees, and more are eligible.",
+    "thumbnail": "/assets/video/thumbnails/immigrant-health-insurance-aca-subsidies-your-benefits.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/immigrant-health-insurance-aca-subsidies-your-benefits.mp4"
+  },
+  {
+    "id": "how-to-compare-health-insurance-plans-like-a-pro",
+    "title": "How to Compare Health Insurance Plans Like a Pro",
+    "category": "tips",
+    "filename": "S - MOOP.mp4",
+    "transcript": "content/transcripts/S - MOOP.txt",
+    "description": "Learn the key numbers that matter when comparing health insurance plans: premiums, deductibles, and out-of-pocket maximums.",
+    "thumbnail": "/assets/video/thumbnails/how-to-compare-health-insurance-plans-like-a-pro.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/how-to-compare-health-insurance-plans-like-a-pro.mp4"
+  },
+  {
+    "id": "4-tips-to-navigate-aca-enrollment-like-a-pro-in-2026",
+    "title": "4 Tips to Navigate ACA Enrollment Like a Pro in 2026",
+    "category": "aca",
+    "filename": "S - Navigate Like a Pro.mp4",
+    "transcript": "content/transcripts/S - Navigate Like a Pro.txt",
+    "description": "Learn four essential tips for navigating ACA enrollment in 2026, from enrolling early to verifying income and working with a trusted advisor.",
+    "thumbnail": "/assets/video/thumbnails/4-tips-to-navigate-aca-enrollment-like-a-pro-in-2026.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/4-tips-to-navigate-aca-enrollment-like-a-pro-in-2026.mp4"
+  },
+  {
+    "id": "avoid-health-insurance-phone-scams-know-what-you-re-buying",
+    "title": "Avoid Health Insurance Phone Scams: Know What You're Buying",
+    "category": "general",
+    "filename": "S - Phone.mp4",
+    "transcript": "content/transcripts/S - Phone.txt",
+    "description": "Learn how misleading health insurance sales tactics work and why you need expert guidance to avoid costly mistakes.",
+    "thumbnail": "/assets/video/thumbnails/avoid-health-insurance-phone-scams-know-what-you-re-buying.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/avoid-health-insurance-phone-scams-know-what-you-re-buying.mp4"
+  },
+  {
+    "id": "aca-subsidies-ending-in-2026-what-you-need-to-know",
+    "title": "ACA Subsidies Ending in 2026: What You Need to Know",
+    "category": "aca",
+    "filename": "S - Plan for 2026.mp4",
+    "transcript": "content/transcripts/S - Plan for 2026.txt",
+    "description": "Learn what's actually happening with ACA subsidies in 2026 and how to plan ahead for your health insurance coverage.",
+    "thumbnail": "/assets/video/thumbnails/aca-subsidies-ending-in-2026-what-you-need-to-know.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-subsidies-ending-in-2026-what-you-need-to-know.mp4"
+  },
+  {
+    "id": "health-insurance-truth-cut-through-the-political-noise",
+    "title": "Health Insurance Truth: Cut Through the Political Noise",
+    "category": "general",
+    "filename": "S - Political.mp4",
+    "transcript": "content/transcripts/S - Political.txt",
+    "description": "After 23 years in insurance, our broker cuts through clickbait headlines to explain what's really changing with health insurance and subsidies in 2026.",
+    "thumbnail": "/assets/video/thumbnails/health-insurance-truth-cut-through-the-political-noise.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/health-insurance-truth-cut-through-the-political-noise.mp4"
+  },
+  {
+    "id": "2026-aca-open-enrollment-income-projection-mistakes-to-avoid",
+    "title": "2026 ACA Open Enrollment: Income Projection Mistakes to Avoid",
+    "category": "aca",
+    "filename": "S - Projections.mp4",
+    "transcript": "content/transcripts/S - Projections.txt",
+    "description": "Learn the biggest ACA mistake people make during open enrollment. Using incorrect income projections can result in owing back federal subsidies at tax time.",
+    "thumbnail": "/assets/video/thumbnails/2026-aca-open-enrollment-income-projection-mistakes-to-avoid.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/2026-aca-open-enrollment-income-projection-mistakes-to-avoid.mp4"
+  },
+  {
+    "id": "truth-about-aca-subsidies-2026-changes-explained",
+    "title": "Truth About ACA Subsidies & 2026 Changes Explained",
+    "category": "aca",
+    "filename": "S - Range.mp4",
+    "transcript": "content/transcripts/S - Range.txt",
+    "description": "Learn how ACA subsidies work and what's really happening in 2026. Get facts instead of clickbait about healthcare coverage changes.",
+    "thumbnail": "/assets/video/thumbnails/truth-about-aca-subsidies-2026-changes-explained.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/truth-about-aca-subsidies-2026-changes-explained.mp4"
+  },
+  {
+    "id": "is-health-insurance-worth-it-if-you-re-healthy",
+    "title": "Is Health Insurance Worth It If You're Healthy?",
+    "category": "general",
+    "filename": "S - Risk Pool.mp4",
+    "transcript": "content/transcripts/S - Risk Pool.txt",
+    "description": "Learn why health insurance matters even for young, healthy people. Understand risk pools and how to evaluate your personal health coverage needs.",
+    "thumbnail": "/assets/video/thumbnails/is-health-insurance-worth-it-if-you-re-healthy.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/is-health-insurance-worth-it-if-you-re-healthy.mp4"
+  },
+  {
+    "id": "aca-2026-understanding-subsidy-changes-and-your-options",
+    "title": "ACA 2026: Understanding Subsidy Changes and Your Options",
+    "category": "aca",
+    "filename": "S - Seek Help_1.mp4",
+    "transcript": "content/transcripts/S - Seek Help_1.txt",
+    "description": "Learn about COVID-era subsidy changes coming in 2026 and explore health insurance options if you exceed 400% of federal poverty limits.",
+    "thumbnail": "/assets/video/thumbnails/aca-2026-understanding-subsidy-changes-and-your-options.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-2026-understanding-subsidy-changes-and-your-options.mp4"
+  },
+  {
+    "id": "health-insurance-solutions-for-small-business-owners",
+    "title": "Health Insurance Solutions for Small Business Owners",
+    "category": "general",
+    "filename": "S - Small Biz Owners.mp4",
+    "transcript": "content/transcripts/S - Small Biz Owners.txt",
+    "description": "Discover how small businesses with 10-20 employees can offer sustainable health benefits through stipend models and expert guidance from 316 Health Insurance.",
+    "thumbnail": "/assets/video/thumbnails/health-insurance-solutions-for-small-business-owners.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/health-insurance-solutions-for-small-business-owners.mp4"
+  },
+  {
+    "id": "aca-subsidies-at-60k-income-does-family-size-matter",
+    "title": "ACA Subsidies at $60K Income: Does Family Size Matter?",
+    "category": "aca",
+    "filename": "S - Subsidies.mp4",
+    "driveFileId": "1Bs1TTj8Xj7tgP71R_q3YL9MRZeZJtz1I",
+    "transcript": "content/transcripts/S - Subsidies.txt",
+    "description": "Learn if you qualify for ACA subsidies at $60,000 annual income. Family size determines your subsidy eligibility and amount.",
+    "thumbnail": "/assets/video/thumbnails/aca-subsidies-at-60k-income-does-family-size-matter.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-subsidies-at-60k-income-does-family-size-matter.mp4"
+  },
+  {
+    "id": "aca-changes-2026-the-trifecta",
+    "title": "ACA Changes 2026: The Trifecta Affecting Your Health Insurance",
+    "category": "aca",
+    "filename": "S - Trifecta.mp4",
+    "driveFileId": "1m3nWMtztxC6RucacpzhlfVEZl3WvewwL",
+    "transcript": "content/transcripts/S - Trifecta.txt",
+    "description": "Understand three major changes coming to the ACA in 2026: new legislation, ending COVID subsidies, and CMS rule changes. Learn how they impact your coverage.",
+    "thumbnail": "/assets/video/thumbnails/aca-changes-2026-the-trifecta.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-changes-2026-the-trifecta.mp4"
+  },
+  {
+    "id": "aca-changes-new-pre-enrollment-verification-requirements",
+    "title": "ACA Changes: New Pre-Enrollment Verification Requirements",
+    "category": "aca",
+    "filename": "S - Verifications.mp4",
+    "driveFileId": "1ypZtMYViacTDS6hgjMkV2auY3cuPnjIF",
+    "transcript": "content/transcripts/S - Verifications.txt",
+    "description": "Learn about the Affordable Care Act's new eligibility verification process. Find out why documentation is now required upfront and how to prepare for 2024 enrollment.",
+    "thumbnail": "/assets/video/thumbnails/aca-changes-new-pre-enrollment-verification-requirements.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-changes-new-pre-enrollment-verification-requirements.mp4"
+  },
+  {
+    "id": "small-business-health-insurance-the-stipend-solution",
+    "title": "Small Business Health Insurance: The Stipend Solution",
+    "category": "tips",
+    "filename": "S - You and Employees.mp4",
+    "driveFileId": "1hyu4VPF22xY0wru7lwCuYgrPWvv11tPN",
+    "transcript": "content/transcripts/S - You and Employees.txt",
+    "description": "Discover how small businesses with 3-8 employees can offer sustainable health benefits through employee stipends instead of traditional group plans.",
+    "thumbnail": "/assets/video/thumbnails/small-business-health-insurance-the-stipend-solution.jpg",
+    "duration": "",
+    "dateAdded": "2026-06-26",
+    "orientation": "portrait",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/small-business-health-insurance-the-stipend-solution.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/316-health-introduction.jpg",
+    "id": "316-health-introduction",
+    "orientation": "landscape",
+    "category": "general",
+    "description": "Meet the team at 316 Health Insurance — an independent brokerage built to help individuals, families, and small businesses navigate health coverage with clarity and no sales pressure.",
+    "videoHeight": 1080,
+    "title": "316 Health Insurance Introduction",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/316-health-introduction.mp4",
+    "filename": "316-health-introduction.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/health-insurance-for-retirement.jpg",
+    "id": "health-insurance-for-retirement",
+    "orientation": "landscape",
+    "category": "tips",
+    "description": "Planning for retirement? Health insurance is one of the biggest unknowns. Here's what your options actually look like before Medicare kicks in at 65.",
+    "videoHeight": 1080,
+    "title": "What Does Health Insurance Look Like When You're Ready To Retire?",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/health-insurance-for-retirement.mp4",
+    "filename": "health-insurance-for-retirement.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/thinking-differently-health-insurance.jpg",
+    "id": "thinking-differently-health-insurance",
+    "orientation": "landscape",
+    "category": "tips",
+    "description": "Most people treat health insurance as a checkbox. Here's a different way to think about it — one that actually protects you when it matters.",
+    "videoHeight": 1080,
+    "title": "Thinking Differently About Health Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/thinking-differently-health-insurance.mp4",
+    "filename": "thinking-differently-health-insurance.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/advisory-services.jpg",
+    "id": "advisory-services",
+    "orientation": "landscape",
+    "category": "general",
+    "description": "What does it look like to have a real advisor in your corner? 316 Health offers ongoing advisory services that go beyond just picking a plan — we're here when things get complicated.",
+    "videoHeight": 1080,
+    "title": "316 Health Insurance: Advisory Services",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/advisory-services.mp4",
+    "filename": "advisory-services.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/claims-advocacy.jpg",
+    "id": "claims-advocacy",
+    "orientation": "landscape",
+    "category": "general",
+    "description": "Getting a claim denied or stuck in a billing nightmare? Our claims advocacy service fights on your behalf so you don't have to navigate the system alone.",
+    "videoHeight": 1080,
+    "title": "316 Health Insurance: Claims Advocacy",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/claims-advocacy.mp4",
+    "filename": "claims-advocacy.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/supplemental-gap-insurance.jpg",
+    "id": "supplemental-gap-insurance",
+    "orientation": "landscape",
+    "category": "tips",
+    "description": "Even with good health insurance, out-of-pocket costs can add up fast. Supplemental GAP insurance fills the holes your primary plan leaves behind.",
+    "videoHeight": 1080,
+    "title": "316 Health Insurance: Supplemental GAP Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/supplemental-gap-insurance.mp4",
+    "filename": "supplemental-gap-insurance.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/individual-family-insurance.jpg",
+    "id": "individual-family-insurance",
+    "orientation": "landscape",
+    "category": "general",
+    "description": "Whether you're self-employed, between jobs, or just shopping on your own, individual and family health insurance can be confusing. We break it down.",
+    "videoHeight": 1080,
+    "title": "316 Health Insurance: Individual & Family Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/individual-family-insurance.mp4",
+    "filename": "individual-family-insurance.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/solving-the-medicare-mystery.jpg",
+    "id": "solving-the-medicare-mystery",
+    "orientation": "landscape",
+    "category": "tips",
+    "description": "Medicare is more complex than most people expect. Parts A, B, C, D — plus supplements. We cut through the confusion and help you understand what you actually need.",
+    "videoHeight": 1080,
+    "title": "316 Health Insurance: Solving the Medicare Mystery",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/solving-the-medicare-mystery.mp4",
+    "filename": "solving-the-medicare-mystery.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/aca-family-glitch-explained.jpg",
+    "id": "aca-family-glitch-explained",
+    "orientation": "landscape",
+    "category": "aca",
+    "description": "The ACA's 'Family Glitch' left millions without affordable coverage for years. Here's what it was, why it mattered, and how the fix changes your options.",
+    "videoHeight": 1080,
+    "title": "Health Insurance, the ACA, and the Fix for the Family Glitch",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-family-glitch-explained.mp4",
+    "filename": "aca-family-glitch-explained.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/navigating-health-insurance.jpg",
+    "id": "navigating-health-insurance",
+    "orientation": "landscape",
+    "category": "tips",
+    "description": "Health insurance is complicated by design. This video gives you a grounded overview of how to navigate your options without feeling overwhelmed.",
+    "videoHeight": 1080,
+    "title": "Navigating Health Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/navigating-health-insurance.mp4",
+    "filename": "navigating-health-insurance.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/testimonial-cheryl-mccall.jpg",
+    "id": "testimonial-cheryl-mccall",
+    "orientation": "landscape",
+    "category": "team",
+    "description": "Cheryl McCall shares what it was like working with 316 Health Insurance to find the right coverage for her situation.",
+    "videoHeight": 1080,
+    "title": "Cheryl McCall Shares Her Experience With 316 Health Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/testimonial-cheryl-mccall.mp4",
+    "filename": "testimonial-cheryl-mccall.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/testimonial-gavin-warren.jpg",
+    "id": "testimonial-gavin-warren",
+    "orientation": "landscape",
+    "category": "team",
+    "description": "Gavin Warren talks about his experience navigating health insurance options with the 316 Health team.",
+    "videoHeight": 1080,
+    "title": "Gavin Warren Shares His Experience With 316 Health Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/testimonial-gavin-warren.mp4",
+    "filename": "testimonial-gavin-warren.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/testimonial-heath-sandy.jpg",
+    "id": "testimonial-heath-sandy",
+    "orientation": "landscape",
+    "category": "team",
+    "description": "Heath and Sandy share how 316 Health Insurance helped them find the right plan and what the experience was really like.",
+    "videoHeight": 1080,
+    "title": "Heath and Sandy Share Their Experience With 316 Health Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/testimonial-heath-sandy.mp4",
+    "filename": "testimonial-heath-sandy.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/testimonial-alex-brewer.jpg",
+    "id": "testimonial-alex-brewer",
+    "orientation": "landscape",
+    "category": "team",
+    "description": "Alex Brewer talks about working with 316 Health Insurance and what made the experience stand out.",
+    "videoHeight": 1080,
+    "title": "Alex Brewer Shares Her Experience With 316 Health Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/testimonial-alex-brewer.mp4",
+    "filename": "testimonial-alex-brewer.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/testimonial-dr-jeni-erker.jpg",
+    "id": "testimonial-dr-jeni-erker",
+    "orientation": "landscape",
+    "category": "team",
+    "description": "Dr. Jeni Erker explains why she trusts 316 Health Insurance enough to refer her own patients to them.",
+    "videoHeight": 1080,
+    "title": "Dr. Jeni Erker on Why She Refers Patients to 316 Health Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/testimonial-dr-jeni-erker.mp4",
+    "filename": "testimonial-dr-jeni-erker.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/testimonial-jordan-prim.jpg",
+    "id": "testimonial-jordan-prim",
+    "orientation": "landscape",
+    "category": "team",
+    "description": "Jordan Prim shares his firsthand experience with the 316 Health Insurance team and what set them apart.",
+    "videoHeight": 1080,
+    "title": "Jordan Prim Shares His Experience With 316 Health Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/testimonial-jordan-prim.mp4",
+    "filename": "testimonial-jordan-prim.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/testimonial-sara-mcgrath.jpg",
+    "id": "testimonial-sara-mcgrath",
+    "orientation": "landscape",
+    "category": "team",
+    "description": "Sara McGrath shares her experience working with 316 Health Insurance to get covered with confidence.",
+    "videoHeight": 1080,
+    "title": "Sara McGrath Shares Her Experience With 316 Health Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/testimonial-sara-mcgrath.mp4",
+    "filename": "testimonial-sara-mcgrath.mp4"
+  },
+  {
+    "videoWidth": 1920,
+    "thumbnail": "/assets/video/thumbnails/testimonial-katie-boston.jpg",
+    "id": "testimonial-katie-boston",
+    "orientation": "landscape",
+    "category": "team",
+    "description": "Katie Boston talks about her experience with the 316 Health team and how they helped her navigate her options.",
+    "videoHeight": 1080,
+    "title": "Katie Boston Shares Her Experience With 316 Health Insurance",
+    "dateAdded": "2026-07-02",
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/testimonial-katie-boston.mp4",
+    "filename": "testimonial-katie-boston.mp4"
+  },
+  {
+    "id": "why-clients-trust-316-health-insurance",
+    "title": "Why Clients Trust 316 Health Insurance",
+    "category": "team",
+    "filename": "Cheryl - Treat Like Family.mp4",
+    "driveFileId": "1CevQjJ2T7VGnKriRnSkhvpX7TlUL3Z9H",
+    "transcript": "content/transcripts/Cheryl - Treat Like Family.txt",
+    "description": "Discover why clients trust 316 Health Insurance to treat them like family and find personalized coverage solutions without gaps.",
+    "thumbnail": "/assets/video/thumbnails/why-clients-trust-316-health-insurance.jpg",
+    "duration": "",
+    "dateAdded": "2026-08-27",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/why-clients-trust-316-health-insurance.mp4"
+  },
+  {
+    "id": "health-insurance-can-be-more-affordable-than-you-think",
+    "title": "Health Insurance Can Be More Affordable Than You Think",
+    "category": "general",
+    "filename": "Dev - Making it affordable.mp4",
+    "driveFileId": "13lGrsvltgK_PRYe8gtYJIg72n4ipJoX4",
+    "transcript": "content/transcripts/Dev - Making it affordable.txt",
+    "description": "Discover how 316 Health Insurance helps clients find coverage within their budget. Often going below expectations with smart navigation options.",
+    "thumbnail": "/assets/video/thumbnails/health-insurance-can-be-more-affordable-than-you-think.jpg",
+    "duration": "",
+    "dateAdded": "2026-08-27",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/health-insurance-can-be-more-affordable-than-you-think.mp4"
+  },
+  {
+    "id": "how-316-health-insurance-found-me-affordable-coverage",
+    "title": "How 316 Health Insurance Found Me Affordable Coverage",
+    "category": "team",
+    "filename": "Gavin SHORT 1.mp4",
+    "driveFileId": "1vM5-rWNx8HEGPuosbvt9ueTXuxDBsB2X",
+    "transcript": "content/transcripts/Gavin SHORT 1.txt",
+    "description": "Hear how one client overcame years without insurance with help from our knowledgeable, caring team. We're here to have your back.",
+    "thumbnail": "/assets/video/thumbnails/how-316-health-insurance-found-me-affordable-coverage.jpg",
+    "duration": "",
+    "dateAdded": "2026-08-27",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/how-316-health-insurance-found-me-affordable-coverage.mp4"
+  },
+  {
+    "id": "aca-emergency-coverage-while-traveling-316-health",
+    "title": "ACA Emergency Coverage While Traveling | 316 Health",
+    "category": "aca",
+    "filename": "Jason - Emergency Services.mp4",
+    "driveFileId": "1yc8VEIAwJrAx9xiPRceecBUF8JxepsPU",
+    "transcript": "content/transcripts/Jason - Emergency Services.txt",
+    "description": "Learn how ACA qualified health plans cover emergency services outside your network when traveling. Get answers to common coverage questions.",
+    "thumbnail": "/assets/video/thumbnails/aca-emergency-coverage-while-traveling-316-health.jpg",
+    "duration": "",
+    "dateAdded": "2026-08-27",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-emergency-coverage-while-traveling-316-health.mp4"
+  },
+  {
+    "id": "aca-cost-sharing-afford-healthcare-when-you-need-it",
+    "title": "ACA Cost Sharing: Afford Healthcare When You Need It",
+    "category": "aca",
+    "filename": "Jason - Is HI affordable.mp4",
+    "driveFileId": "1Hr09JHgkotJfIW_506NsJDuHfMhX8Hd7",
+    "transcript": "content/transcripts/Jason - Is HI affordable.txt",
+    "description": "Learn how federal cost-sharing assistance under the ACA can help you afford out-of-pocket medical expenses, not just premiums.",
+    "thumbnail": "/assets/video/thumbnails/aca-cost-sharing-afford-healthcare-when-you-need-it.jpg",
+    "duration": "",
+    "dateAdded": "2026-08-27",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/aca-cost-sharing-afford-healthcare-when-you-need-it.mp4"
+  },
+  {
+    "id": "direct-primary-care-health-insurance-strategy",
+    "title": "Direct Primary Care + Health Insurance Strategy",
+    "category": "tips",
+    "filename": "Jason - Primary Care.mp4",
+    "driveFileId": "1YufpNNLkQkdu-bWZrlolyyaans_QuwxT",
+    "transcript": "content/transcripts/Jason - Primary Care.txt",
+    "description": "Learn how to combine direct primary care with comprehensive health insurance to cover both routine and catastrophic care needs.",
+    "thumbnail": "/assets/video/thumbnails/direct-primary-care-health-insurance-strategy.jpg",
+    "duration": "",
+    "dateAdded": "2026-08-27",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/direct-primary-care-health-insurance-strategy.mp4"
+  },
+  {
+    "id": "client-success-story-quick-enrollment-support",
+    "title": "Client Success Story: Quick Enrollment Support",
+    "category": "team",
+    "filename": "Jordan 1.mp4",
+    "driveFileId": "1kxHZswZCyXRQU0VM31KvA4eNtqgloqto",
+    "transcript": "content/transcripts/Jordan 1.txt",
+    "description": "Hear how 316 Health Insurance helped resolve an enrollment mistake with compassion and efficiency.",
+    "thumbnail": "/assets/video/thumbnails/client-success-story-quick-enrollment-support.jpg",
+    "duration": "",
+    "dateAdded": "2026-08-27",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/client-success-story-quick-enrollment-support.mp4"
+  },
+  {
+    "id": "finding-affordable-dental-coverage-without-extra-costs",
+    "title": "Finding Affordable Dental Coverage Without Extra Costs",
+    "category": "tips",
+    "filename": "Katie 1.mp4",
+    "driveFileId": "1DjF2jCFtdjCSjeoU2JfSEi04mfLu2H4W",
+    "transcript": "content/transcripts/Katie 1.txt",
+    "description": "Learn how personalized guidance helped one client find affordable health insurance with the specific dental coverage they needed without overpaying.",
+    "thumbnail": "/assets/video/thumbnails/finding-affordable-dental-coverage-without-extra-costs.jpg",
+    "duration": "",
+    "dateAdded": "2026-08-27",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/finding-affordable-dental-coverage-without-extra-costs.mp4"
+  },
+  {
+    "id": "client-testimonial-personalized-health-insurance-support",
+    "title": "Client Testimonial: Personalized Health Insurance Support",
+    "category": "testimonials",
+    "filename": "Cheryl - No Questions Unanswered.mp4",
+    "driveFileId": "1EWZkHiPm9xsXMT4DxxM1XiKJreW21qb0",
+    "transcript": "content/transcripts/Cheryl - No Questions Unanswered.txt",
+    "description": "See how 316 Health Insurance provides responsive, hands-on support that goes beyond typical coverage. Quick responses and thorough answers to all your questions.",
+    "thumbnail": "/assets/video/thumbnails/client-testimonial-personalized-health-insurance-support.jpg",
+    "duration": "",
+    "dateAdded": "2026-08-28",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/client-testimonial-personalized-health-insurance-support.mp4"
+  },
+  {
+    "id": "part-time-workers-health-insurance-options-available",
+    "title": "Part-Time Workers: Health Insurance Options Available",
+    "category": "tips",
+    "filename": "Dev - Options for Everyone.mp4",
+    "driveFileId": "1sjyd-uTWyQaqHAb5DKDUgv-cW2NO-B-P",
+    "transcript": "content/transcripts/Dev - Options for Everyone.txt",
+    "description": "Part-time employees often lack employer coverage. Learn about traditional and non-traditional health insurance options available to you.",
+    "thumbnail": "/assets/video/thumbnails/part-time-workers-health-insurance-options-available.jpg",
+    "duration": "",
+    "dateAdded": "2026-08-28",
+    "orientation": "landscape",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "r2Url": "https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/videos/part-time-workers-health-insurance-options-available.mp4"
+  }
+];</script>
+<!-- Fathom Analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="URWQAMZT" defer></script>
+<!-- End Fathom Analytics -->
+</head>
+<body class="boxed_wrapper">
+
+        <!-- .preloader -->
+    <div class="preloader"><img src="/images/316-logo-horizontal.png" alt="" class="preloader-logo"></div>
+    <!-- /.preloader -->
+
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <!-- Feedbucket feedback widget -->
+    <script type="text/javascript">
+        (function(k) {
+            let s=document.createElement('script');s.defer=true;
+            s.src="https://cdn.feedbucket.app/assets/feedbucket.js";
+            s.dataset.feedbucket=k;document.head.appendChild(s);
+        })('MzEc6wABZhkrys1cXHlG')
+    </script>
+
+    <!-- D&B Visitor Intelligence pixel -->
+    <!--For opt-out information on Visitor Intelligence, please visit: https://d41.co/-->
+    <script type="text/javascript" async defer src="//paapi3210.d41.co/sync/"></script>
+    <script type="text/javascript" src="//v2.d41.co/tags/dnb_coretag_v6.min.js"></script>
+    <script type="text/javascript">dnbvid.getData("paapi3210","json","T",{},function(dnb_Data){
+        if (dnb_Data.status == 200){ //status == 200 represents a match
+            // reserved for future mapping of D&B visitor data
+        }
+    });
+    </script>
+
+    <!-- Google Fonts: DM Serif Display + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+    /* ===== Brand Color System ===== */
+    :root {
+        --brand-blue:      #2C4187;
+        --brand-blue-dark: #1e3070;
+        --brand-orange:    #2C4187;
+    }
+
+    /* ===== Global theme-level blue overrides ===== */
+    .theme-btn,
+    a.theme-btn {
+        background-color: var(--brand-blue) !important;
+        border-color: var(--brand-blue) !important;
+    }
+    .theme-btn:hover,
+    a.theme-btn:hover {
+        background-color: var(--brand-blue-dark) !important;
+        border-color: var(--brand-blue-dark) !important;
+    }
+    .main-header .navigation > li > a:hover,
+    .main-header .navigation > li.current > a {
+        color: var(--brand-blue) !important;
+    }
+    /* Sticky header nav: hover to white (not brand-blue, which blends into the background) */
+    .sticky-header .navigation > li > a:hover,
+    .sticky-header .navigation > li.current > a {
+        color: #ffffff !important;
+    }
+    .main-footer {
+        background-color: var(--brand-blue-dark) !important;
+    }
+    .accordion-box .accordion.active-block .acc-btn,
+    .accordion-box .accordion .acc-btn:hover {
+        color: var(--brand-blue) !important;
+    }
+    .sec-title span,
+    .sec-title .sub-title {
+        color: var(--brand-blue) !important;
+    }
+    .sidebar-categories .categories-list li a:hover {
+        background-color: var(--brand-blue) !important;
+        color: #fff !important;
+    }
+    .sidebar-categories .categories-list li a:hover i {
+        color: #fff !important;
+    }
+    .scroll-top {
+        background-color: var(--brand-blue) !important;
+    }
+    .scroll-top:hover {
+        background-color: var(--brand-blue-dark) !important;
+    }
+
+    /* ===== Top Bar: logo left, contact right ===== */
+    .header-top-bar {
+        background: #f5f6f7;
+        border-bottom: 1px solid #e0e2e5;
+    }
+    .header-top-bar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .top-bar-logo {
+        margin: 0;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+    .top-bar-logo img {
+        max-height: 52px;
+        width: auto;
+        display: block;
+    }
+    .top-bar-info {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 28px;
+        flex-wrap: nowrap;
+    }
+    .top-bar-info > li {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        color: #555;
+        white-space: nowrap;
+    }
+    .top-bar-info > li .tbi-icon {
+        color: var(--brand-orange);
+        font-size: 14px;
+        line-height: 1;
+    }
+    .top-bar-info > li a {
+        color: #555;
+        text-decoration: none;
+    }
+    .top-bar-info > li a:hover {
+        color: var(--brand-blue);
+    }
+    .top-bar-info > li.tbi-btn a {
+        background: var(--brand-blue);
+        color: #fff;
+        padding: 7px 16px;
+        border-radius: 3px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: background 0.2s;
+        text-decoration: none;
+    }
+    .top-bar-info > li.tbi-btn a:hover {
+        background: var(--brand-blue-dark);
+        color: #fff;
+    }
+    .top-bar-info > li.tbi-btn a i {
+        color: inherit;
+        font-size: 10px;
+    }
+
+    /* ===== Nav Bar: desktop, centered nav links, no logo ===== */
+    .header-nav-bar {
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,.07);
+    }
+    .header-nav-bar .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .header-nav-bar .main-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Desktop only, allow flex override of Bootstrap collapse */
+    @media (min-width: 992px) {
+        .header-nav-bar .navbar-collapse {
+            display: flex !important;
+            justify-content: center;
+            float: none !important;
+        }
+        .header-nav-bar .navigation {
+            display: flex !important;
+            float: none !important;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        /* Hide hamburger on desktop */
+        .header-nav-bar .navbar-header {
+            display: none !important;
+        }
+        /* Hide mobile contact strip on desktop */
+        .mobile-contact-strip {
+            display: none !important;
+        }
+    }
+
+    /* Mobile nav bar, logo left, hamburger right */
+    @media (max-width: 991px) {
+        .header-top-bar {
+            display: none;
+        }
+        .header-nav-bar .container {
+            justify-content: space-between;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .header-nav-bar .main-menu {
+            width: 100%;
+        }
+        .header-nav-bar .navbar-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+        }
+        .mobile-nav-logo img {
+            max-height: 40px;
+            width: auto;
+            display: block;
+        }
+        /* Clean hamburger button */
+        .header-nav-bar .navbar-toggle {
+            background: none;
+            border: none;
+            padding: 10px;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            cursor: pointer;
+            box-shadow: none;
+            outline: none;
+            margin: 0;
+        }
+        .header-nav-bar .navbar-toggle .icon-bar {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--brand-blue);
+            border-radius: 2px;
+        }
+        /* Collapsed nav, vertical stack */
+        .header-nav-bar .navbar-collapse {
+            float: none !important;
+            width: 100%;
+            background: #fff;
+            border-top: 1px solid #e0e2e5;
+            box-shadow: 0 4px 12px rgba(0,0,0,.08);
+        }
+        .header-nav-bar .navigation {
+            flex-direction: column;
+            width: 100%;
+            padding: 8px 0;
+            margin: 0;
+        }
+        .header-nav-bar .navigation > li {
+            width: 100%;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .header-nav-bar .navigation > li > a {
+            display: block;
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+        .header-nav-bar .navigation > li > ul {
+            position: static;
+            box-shadow: none;
+            background: #f8f9fa;
+            padding-left: 16px;
+        }
+        /* Mobile contact strip, phone + CTA below hamburger menu */
+        .mobile-contact-strip {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 16px;
+            background: #f5f6f7;
+            border-top: 1px solid #e0e2e5;
+            gap: 10px;
+        }
+        .mobile-phone-link {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--brand-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .mobile-cta-btn {
+            font-size: 12px !important;
+            padding: 7px 14px !important;
+        }
+    }
+
+    /* ===== Sticky Header, logo left, nav RIGHT-justified ===== */
+    .sticky-header > .container {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sticky-header .nav-logo {
+        float: none !important;
+        margin: 0;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+    .sticky-header .nav-logo img {
+        max-height: 40px;
+        width: auto;
+        display: block;
+    }
+    .sticky-header .menu-area {
+        float: none !important;
+        margin: 0;
+    }
+    .sticky-header .navbar-collapse {
+        display: flex !important;
+        justify-content: flex-end;
+        float: none !important;
+    }
+    .sticky-header .navigation {
+        display: flex !important;
+        float: none !important;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ===== Hero font, force match body/nav sans-serif ===== */
+    .main-slider *,
+    .main-slider h1,
+    .main-slider h2,
+    .main-slider h3,
+    .main-slider h4 {
+        font-family: inherit !important;
+    }
+
+    @media (max-width: 991px) {
+        .top-bar-info {
+            gap: 14px;
+        }
+        .top-bar-logo img {
+            max-height: 42px;
+        }
+    }
+    </style>
+
+    <!-- Main Header -->
+    <header class="main-header">
+
+        <!-- Row 1: Top Bar, logo left, contact right (desktop only) -->
+        <div class="header-top-bar">
+            <div class="container">
+                <figure class="top-bar-logo">
+                    <a href="/"><img src="/images/logo.png" alt="316 Health Insurance - Independent Health Insurance Broker in Wichita, KS"></a>
+                </figure>
+                <ul class="top-bar-info">
+                    <li class="tbi-phone">
+                        <i class="flaticon-phone-call tbi-icon"></i>
+                        <a href="tel:3162823440">(316) 282-3440</a>
+                    </li>
+                    <li class="tbi-email">
+                        <i class="flaticon-mail tbi-icon"></i>
+                        <a href="/cdn-cgi/l/email-protection#c6afa8a0a986f5f7f0aea3a7aab2aeafa8b5e8a5a9ab"><span class="__cf_email__" data-cfemail="e38a8d858ca3d0d2d58b86828f978b8a8d90cd808c8e">[email&#160;protected]</span></a>
+                    </li>
+                    <li class="tbi-hours">
+                        <i class="flaticon-clock tbi-icon"></i>
+                        <span>Mon &#8211; Fri 9am &#8211; 5pm</span>
+                    </li>
+                    <li class="tbi-btn">
+                        <a href="/contact/">Consultation<i class="flaticon-outcoming-object"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Row 2: Nav Bar, desktop: centered links | mobile: logo + hamburger -->
+        <div class="header-nav-bar">
+            <div class="container">
+                <nav class="main-menu navbar-expand-lg">
+                    <div class="navbar-header">
+                        <a class="mobile-nav-logo" href="/"><img src="/images/logo.png" alt="316 Health Insurance"></a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse clearfix">
+                        <ul class="navigation clearfix">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about/">About</a></li>
+                            <li class="dropdown"><a href="/services/">Services</a>
+                                <ul>
+                                    <li><a href="/medicare/">Medicare</a></li>
+                                    <li><a href="/aca-marketplace/">ACA / Marketplace</a></li>
+                                    <li><a href="/individual-family-health-insurance/">Individual &amp; Family</a></li>
+                                    <li><a href="/small-group-health-insurance/">Small Group</a></li>
+                                    <li><a href="/health-insurance-self-employed/">Self-Employed</a></li>
+                                    <li><a href="/cobra-turning-26/">COBRA &amp; Turning 26</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="/locations/">Locations</a>
+                                <ul>
+                                    <li><a href="/locations/wichita-ks/">Wichita, KS</a></li>
+                                    <li><a href="/locations/tulsa-ok/">Tulsa, OK</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/videos/">Videos</a></li>
+                            <li><a href="/reviews/">Testimonials</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Mobile contact strip (phone + CTA), hidden on desktop -->
+                <div class="mobile-contact-strip">
+                    <a href="tel:3162823440" class="mobile-phone-link"><i class="flaticon-phone-call"></i> (316) 282-3440</a>
+                    <a href="/contact/" class="theme-btn mobile-cta-btn">Consultation</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Header (compact: logo left, nav right-justified) -->
+        <div class="sticky-header">
+            <div class="container clearfix">
+                <figure class="nav-logo">
+                    <a href="/"><img src="/images/logo.png" alt="316 Health Insurance"></a>
+                </figure>
+                <div class="menu-area">
+                    <nav class="main-menu navbar-expand-lg">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about/">About</a></li>
+                                <li class="dropdown"><a href="/services/">Services</a>
+                                    <ul>
+                                        <li><a href="/medicare/">Medicare</a></li>
+                                        <li><a href="/aca-marketplace/">ACA / Marketplace</a></li>
+                                        <li><a href="/individual-family-health-insurance/">Individual &amp; Family</a></li>
+                                        <li><a href="/small-group-health-insurance/">Small Group</a></li>
+                                        <li><a href="/health-insurance-self-employed/">Self-Employed</a></li>
+                                        <li><a href="/cobra-turning-26/">COBRA &amp; Turning 26</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="/locations/">Locations</a>
+                                    <ul>
+                                        <li><a href="/locations/wichita-ks/">Wichita, KS</a></li>
+                                        <li><a href="/locations/tulsa-ok/">Tulsa, OK</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/videos/">Videos</a></li>
+                                <li><a href="/reviews/">Testimonials</a></li>
+                                <li><a href="/contact/">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- End Main Header -->
+
+
+
+    <section class="page-title centred" style="background-image: url(/images/office/brand-shoot-2024/IMG_4039b.jpg);">
+        <div class="container">
+            <div class="content-box">
+                <ul class="bread-crumb">
+                    <li><a href="/">Home</a></li>
+                    <li>Videos</li>
+                </ul>
+                <div class="title"><h1 style="color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.55);">Health Insurance Video Library</h1></div>
+                <p style="color:rgba(255,255,255,.85); font-size:16px; margin-top:10px;">Real answers from real advisors, no jargon.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0;">
+        <div class="container">
+
+            <!-- Category Filters -->
+            <div class="video-hub-filters" id="video-hub-filters">
+                <!-- Populated dynamically from videos.json categories -->
+            </div>
+
+            <!-- Video Grid -->
+            <div class="video-hub-grid" id="video-hub-grid">
+                <div class="video-hub-empty">
+                    <i class="flaticon-video"></i>
+                    <p>Loading videos&#8230;</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 60px 0; background: #2C4187; text-align:center;">
+        <div class="container">
+            <h2 style="color:#fff; margin-bottom:15px;">Have Questions About Your Coverage?</h2>
+            <p style="color:rgba(255,255,255,.85); margin-bottom:25px;">Talk to a real person.</p>
+            <a href="/contact/" class="kg-cta-btn">Schedule a Consultation<i class="flaticon-outcoming-object" style="margin-left:11px;"></i></a>
+            <p style="color:rgba(255,255,255,.7); margin-top:15px; font-size:14px;">Or call: <a href="tel:3162823440" style="color:#fff;">(316) 282-3440</a></p>
+        </div>
+    </section>
+
+    <!-- main-footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="main-footer-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="about-widget footer-widget">
+                            <figure class="footer-logo" style="margin-bottom:20px;"><a href="/"><img src="/images/logo-white.png" alt="316 Health Insurance" style="width:200px; height:auto;"></a></figure>
+                            <div class="text">
+                                <p>Independent, local health insurance brokerage in Wichita and Tulsa, serving clients across the country. We educate and empower people to self-discover health insurance strategies that work, then walk with them through their journey. We serve individuals, families, the self-employed, Medicare recipients, and small businesses. Est. 2003.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                        <div class="explore-widget footer-widget">
+                            <h3 class="widget-title">Explore</h3>
+                            <ul class="link-list">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about/">About</a></li>
+                                <li><a href="/locations/wichita-ks/">Wichita, KS</a></li>
+                                <li><a href="/locations/tulsa-ok/">Tulsa, OK</a></li>
+                                <li><a href="/contact/">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="product-widget footer-widget">
+                            <h3 class="widget-title">Our Services</h3>
+                            <ul class="link-list">
+                                <li><a href="/medicare/">Medicare</a></li>
+                                <li><a href="/videos/">Video Library</a></li>
+                                <li><a href="/aca-marketplace/">ACA / Marketplace</a></li>
+                                <li><a href="/individual-family-health-insurance/">Individual &amp; Family</a></li>
+                                <li><a href="/small-group-health-insurance/">Small Group</a></li>
+                                <li><a href="/health-insurance-self-employed/">Self-Employed</a></li>
+                                <li><a href="/cobra-turning-26/">COBRA &amp; Turning 26</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="info-widget footer-widget">
+                            <h3 class="widget-title">Contact Us</h3>
+                            <div class="info-box">
+                                <div class="single-info">
+                                    <span>316 Health Insurance</span>
+                                    <div class="text"><a href="https://maps.google.com/?q=100+S+Main+St,+Suite+102,+Wichita,+KS+67202" target="_blank" rel="noopener" class="footer-map-link">100 S Main St, Suite 102<br>Wichita, KS</a></div>
+                                </div>
+                                <div class="single-info">
+                                    <span>Phone</span>
+                                    <div class="text"><a href="tel:3162823440">(316) 282-3440</a></div>
+                                </div>
+                                <div class="single-info">
+                                    <span>Email</span>
+                                    <div class="text"><a href="/cdn-cgi/l/email-protection#472e292128077476712f22262b332f2e29346924282a"><span class="__cf_email__" data-cfemail="b3daddd5dcf3808285dbd6d2dfc7dbdaddc09dd0dcde">[email&#160;protected]</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+                <div class="copyright">Copyright &copy; <span id="footer-year"></span> <a href="/">316 Health Insurance</a>. All rights reserved. | Independent Licensed Insurance Broker | KS &amp; OK</div>
+                <ul class="social-style-one" style="margin:0;">
+                    <li><a href="https://www.facebook.com/316HealthInsurance" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/316healthins/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <style>.footer-map-link { color: inherit; text-decoration: none; }</style>
+    <!-- main-footer end -->
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+
+
+    <!--Scroll to top-->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fas fa-arrow-up"></span>
+    </button>
+
+    <!-- jquery plugins -->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.js"></script>
+    <script src="/js/wow.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/isotope.js"></script>
+    <script src="/js/appear.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script src="/js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/js/SmoothScroll.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/custom.js"></script>
+
+    <script>
+    (function() {
+      var activeCategory = 'all';
+      var allVideos = [];
+
+      function categoryLabel(cat) {
+        var map = { tips: 'Tips & Advice', medicare: 'Medicare', aca: 'ACA / Marketplace', general: 'General' };
+        return map[cat] || cat.charAt(0).toUpperCase() + cat.slice(1);
+      }
+
+      function thumbHtml(video) {
+        if (video.thumbnail) {
+          var thumbSrc = video.thumbnail.startsWith('http') ? video.thumbnail : video.thumbnail;
+          return '<img src="' + thumbSrc + '" alt="' + escHtml(video.title) + '" onerror="this.parentNode.innerHTML=\'<div class=video-card-thumb-placeholder><i class=\"flaticon-video\"></i></div>\'">'
+        }
+        return '<div class="video-card-thumb-placeholder"><i class="flaticon-video"></i></div>';
+      }
+
+      function escHtml(str) {
+        return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      }
+
+      function buildCard(v, extraClass) {
+        var slug = '/videos/' + v.id + '/';
+        var cls = 'video-card' + (extraClass ? ' ' + extraClass : '');
+        return '<article class="' + cls + '">' +
+          '<a href="' + slug + '" class="video-card-thumb">' +
+            thumbHtml(v) +
+            '<div class="video-card-play"><div class="video-card-play-icon"><i class="fa fa-play"></i></div></div>' +
+            (v.duration ? '<span class="video-card-duration">' + escHtml(v.duration) + '</span>' : '') +
+          '</a>' +
+          '<div class="video-card-body">' +
+            '<div class="video-card-category">' + escHtml(categoryLabel(v.category)) + '</div>' +
+            '<h3 class="video-card-title">' + escHtml(v.title) + '</h3>' +
+            '<p class="video-card-desc">' + escHtml(v.description || '') + '</p>' +
+            '<a href="' + slug + '" class="video-card-link">Watch video <i class="fa fa-arrow-right"></i></a>' +
+          '</div>' +
+          '</article>';
+      }
+
+      function renderCards(videos) {
+        var grid = document.getElementById('video-hub-grid');
+        if (!videos.length) {
+          grid.innerHTML = '<div class="video-hub-empty"><i class="flaticon-video"></i><p>No videos in this category yet. Check back soon.</p></div>';
+          return;
+        }
+        grid.innerHTML = videos.map(function(v) { return buildCard(v, ''); }).join('');
+      }
+
+      function buildCategoryFilters(videos) {
+        var cats = ['all'];
+        var seen = {};
+        videos.forEach(function(v) {
+          if (!seen[v.category]) { cats.push(v.category); seen[v.category] = 1; }
+        });
+
+        var filtersEl = document.getElementById('video-hub-filters');
+        filtersEl.innerHTML = cats.map(function(cat) {
+          var label = cat === 'all' ? 'All Videos' : categoryLabel(cat);
+          var active = cat === 'all' ? ' active' : '';
+          return '<button class="video-hub-filter-btn' + active + '" data-category="' + cat + '">' + label + '</button>';
+        }).join('');
+
+        filtersEl.addEventListener('click', function(e) {
+          var btn = e.target.closest('.video-hub-filter-btn');
+          if (!btn) return;
+          filtersEl.querySelectorAll('.video-hub-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          activeCategory = btn.dataset.category;
+          var filtered = activeCategory === 'all' ? allVideos : allVideos.filter(function(v) { return v.category === activeCategory; });
+          renderCards(filtered);
+        });
+      }
+
+      // Filter out placeholder entries
+      function isPlaceholder(v) { return !!v._note; }
+
+      // Use inline data (injected at build time) or fall back to fetch
+      function loadVideos() {
+        if (window.__VIDEOS_DATA__ && Array.isArray(window.__VIDEOS_DATA__) && window.__VIDEOS_DATA__.length) {
+          var data = window.__VIDEOS_DATA__.filter(function(v) { return !isPlaceholder(v); });
+          allVideos = data;
+          buildCategoryFilters(data);
+          renderCards(data);
+        } else {
+          fetch('/videos.json')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+              allVideos = (Array.isArray(data) ? data : []).filter(function(v) { return !isPlaceholder(v); });
+              buildCategoryFilters(allVideos);
+              renderCards(allVideos);
+            })
+            .catch(function() {
+              document.getElementById('video-hub-grid').innerHTML =
+                '<div class="video-hub-empty"><i class="flaticon-video"></i><p>Videos coming soon.</p></div>';
+            });
+        }
+      }
+      loadVideos();
+    })();
+    </script>
+    <!-- TRACKING: GA4/GTM injected by Leo post-build -->
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"bda470b187434abfb6dc5d3153c0a9d5","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
+

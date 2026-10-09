@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-full-color-32.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-full-color-16.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-grey-32.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-grey-16.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="/images/favicon-full-color-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- build:20260805f --><title>Health Insurance Broker in Kansas & Oklahoma | 316 Health Insurance</title>
+<meta name="description" content="Independent health insurance broker serving Kansas and Oklahoma. We help individuals, families, Medicare recipients, and small businesses find the right coverage, without pressure. Licensed in KS and OK since 2003.">
+<meta name="robots" content="index, follow">
+<!-- Open Graph / Link Preview -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://316healthins.com/">
+<meta property="og:title" content="Health Insurance Broker in Kansas & Oklahoma | 316 Health Insurance">
+<meta property="og:description" content="Independent health insurance broker serving Kansas and Oklahoma. We help individuals, families, Medicare recipients, and small businesses find the right coverage, without pressure. Licensed in KS and OK since 2003.">
+<meta property="og:image" content="https://316-health-insurance.pages.dev/images/316-Link-Preview.png">
+<meta property="og:image:width" content="1731">
+<meta property="og:image:height" content="909">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://316-health-insurance.pages.dev/images/316-Link-Preview.png">
+<link rel="canonical" href="https://316healthins.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "InsuranceAgency"],
+  "@id": "https://316healthins.com/#organization",
+  "name": "316 Health Insurance",
+  "url": "https://316healthins.com",
+  "telephone": "(316) 282-3440",
+  "email": "jason@316healthins.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "100 S Main St, Suite 102",
+    "addressLocality": "Wichita",
+    "addressRegion": "KS",
+    "postalCode": "67202",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Kansas", "Oklahoma"],
+  "description": "Independent health insurance broker in Wichita, KS. Helping individuals, families, Medicare recipients, and small businesses find the right coverage. Licensed in Kansas and Oklahoma. Est. 2003.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "52",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+<!-- Stylesheets -->
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/responsive.css" rel="stylesheet">
+
+    
+<!-- Fathom Analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="URWQAMZT" defer></script>
+<!-- End Fathom Analytics -->
+</head>
+
+<body class="boxed_wrapper">
+
+        <!-- .preloader -->
+    <div class="preloader"><img src="/images/316-logo-horizontal.png" alt="" class="preloader-logo"></div>
+    <!-- /.preloader -->
+
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <!-- Feedbucket feedback widget -->
+    <script type="text/javascript">
+        (function(k) {
+            let s=document.createElement('script');s.defer=true;
+            s.src="https://cdn.feedbucket.app/assets/feedbucket.js";
+            s.dataset.feedbucket=k;document.head.appendChild(s);
+        })('MzEc6wABZhkrys1cXHlG')
+    </script>
+
+    <!-- D&B Visitor Intelligence pixel -->
+    <!--For opt-out information on Visitor Intelligence, please visit: https://d41.co/-->
+    <script type="text/javascript" async defer src="//paapi3210.d41.co/sync/"></script>
+    <script type="text/javascript" src="//v2.d41.co/tags/dnb_coretag_v6.min.js"></script>
+    <script type="text/javascript">dnbvid.getData("paapi3210","json","T",{},function(dnb_Data){
+        if (dnb_Data.status == 200){ //status == 200 represents a match
+            // reserved for future mapping of D&B visitor data
+        }
+    });
+    </script>
+
+    <!-- Google Fonts: DM Serif Display + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+    /* ===== Brand Color System ===== */
+    :root {
+        --brand-blue:      #2C4187;
+        --brand-blue-dark: #1e3070;
+        --brand-orange:    #2C4187;
+    }
+
+    /* ===== Global theme-level blue overrides ===== */
+    .theme-btn,
+    a.theme-btn {
+        background-color: var(--brand-blue) !important;
+        border-color: var(--brand-blue) !important;
+    }
+    .theme-btn:hover,
+    a.theme-btn:hover {
+        background-color: var(--brand-blue-dark) !important;
+        border-color: var(--brand-blue-dark) !important;
+    }
+    .main-header .navigation > li > a:hover,
+    .main-header .navigation > li.current > a {
+        color: var(--brand-blue) !important;
+    }
+    /* Sticky header nav: hover to white (not brand-blue, which blends into the background) */
+    .sticky-header .navigation > li > a:hover,
+    .sticky-header .navigation > li.current > a {
+        color: #ffffff !important;
+    }
+    .main-footer {
+        background-color: var(--brand-blue-dark) !important;
+    }
+    .accordion-box .accordion.active-block .acc-btn,
+    .accordion-box .accordion .acc-btn:hover {
+        color: var(--brand-blue) !important;
+    }
+    .sec-title span,
+    .sec-title .sub-title {
+        color: var(--brand-blue) !important;
+    }
+    .sidebar-categories .categories-list li a:hover {
+        background-color: var(--brand-blue) !important;
+        color: #fff !important;
+    }
+    .sidebar-categories .categories-list li a:hover i {
+        color: #fff !important;
+    }
+    .scroll-top {
+        background-color: var(--brand-blue) !important;
+    }
+    .scroll-top:hover {
+        background-color: var(--brand-blue-dark) !important;
+    }
+
+    /* ===== Top Bar: logo left, contact right ===== */
+    .header-top-bar {
+        background: #f5f6f7;
+        border-bottom: 1px solid #e0e2e5;
+    }
+    .header-top-bar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .top-bar-logo {
+        margin: 0;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+    .top-bar-logo img {
+        max-height: 52px;
+        width: auto;
+        display: block;
+    }
+    .top-bar-info {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 28px;
+        flex-wrap: nowrap;
+    }
+    .top-bar-info > li {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        color: #555;
+        white-space: nowrap;
+    }
+    .top-bar-info > li .tbi-icon {
+        color: var(--brand-orange);
+        font-size: 14px;
+        line-height: 1;
+    }
+    .top-bar-info > li a {
+        color: #555;
+        text-decoration: none;
+    }
+    .top-bar-info > li a:hover {
+        color: var(--brand-blue);
+    }
+    .top-bar-info > li.tbi-btn a {
+        background: var(--brand-blue);
+        color: #fff;
+        padding: 7px 16px;
+        border-radius: 3px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: background 0.2s;
+        text-decoration: none;
+    }
+    .top-bar-info > li.tbi-btn a:hover {
+        background: var(--brand-blue-dark);
+        color: #fff;
+    }
+    .top-bar-info > li.tbi-btn a i {
+        color: inherit;
+        font-size: 10px;
+    }
+
+    /* ===== Nav Bar: desktop, centered nav links, no logo ===== */
+    .header-nav-bar {
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,.07);
+    }
+    .header-nav-bar .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .header-nav-bar .main-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Desktop only, allow flex override of Bootstrap collapse */
+    @media (min-width: 992px) {
+        .header-nav-bar .navbar-collapse {
+            display: flex !important;
+            justify-content: center;
+            float: none !important;
+        }
+        .header-nav-bar .navigation {
+            display: flex !important;
+            float: none !important;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        /* Hide hamburger on desktop */
+        .header-nav-bar .navbar-header {
+            display: none !important;
+        }
+        /* Hide mobile contact strip on desktop */
+        .mobile-contact-strip {
+            display: none !important;
+        }
+    }
+
+    /* Mobile nav bar, logo left, hamburger right */
+    @media (max-width: 991px) {
+        .header-top-bar {
+            display: none;
+        }
+        .header-nav-bar .container {
+            justify-content: space-between;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .header-nav-bar .main-menu {
+            width: 100%;
+        }
+        .header-nav-bar .navbar-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+        }
+        .mobile-nav-logo img {
+            max-height: 40px;
+            width: auto;
+            display: block;
+        }
+        /* Clean hamburger button */
+        .header-nav-bar .navbar-toggle {
+            background: none;
+            border: none;
+            padding: 10px;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            cursor: pointer;
+            box-shadow: none;
+            outline: none;
+            margin: 0;
+        }
+        .header-nav-bar .navbar-toggle .icon-bar {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--brand-blue);
+            border-radius: 2px;
+        }
+        /* Collapsed nav, vertical stack */
+        .header-nav-bar .navbar-collapse {
+            float: none !important;
+            width: 100%;
+            background: #fff;
+            border-top: 1px solid #e0e2e5;
+            box-shadow: 0 4px 12px rgba(0,0,0,.08);
+        }
+        .header-nav-bar .navigation {
+            flex-direction: column;
+            width: 100%;
+            padding: 8px 0;
+            margin: 0;
+        }
+        .header-nav-bar .navigation > li {
+            width: 100%;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .header-nav-bar .navigation > li > a {
+            display: block;
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+        .header-nav-bar .navigation > li > ul {
+            position: static;
+            box-shadow: none;
+            background: #f8f9fa;
+            padding-left: 16px;
+        }
+        /* Mobile contact strip, phone + CTA below hamburger menu */
+        .mobile-contact-strip {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 16px;
+            background: #f5f6f7;
+            border-top: 1px solid #e0e2e5;
+            gap: 10px;
+        }
+        .mobile-phone-link {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--brand-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .mobile-cta-btn {
+            font-size: 12px !important;
+            padding: 7px 14px !important;
+        }
+    }
+
+    /* ===== Sticky Header, logo left, nav RIGHT-justified ===== */
+    .sticky-header > .container {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sticky-header .nav-logo {
+        float: none !important;
+        margin: 0;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+    .sticky-header .nav-logo img {
+        max-height: 40px;
+        width: auto;
+        display: block;
+    }
+    .sticky-header .menu-area {
+        float: none !important;
+        margin: 0;
+    }
+    .sticky-header .navbar-collapse {
+        display: flex !important;
+        justify-content: flex-end;
+        float: none !important;
+    }
+    .sticky-header .navigation {
+        display: flex !important;
+        float: none !important;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ===== Hero font, force match body/nav sans-serif ===== */
+    .main-slider *,
+    .main-slider h1,
+    .main-slider h2,
+    .main-slider h3,
+    .main-slider h4 {
+        font-family: inherit !important;
+    }
+
+    @media (max-width: 991px) {
+        .top-bar-info {
+            gap: 14px;
+        }
+        .top-bar-logo img {
+            max-height: 42px;
+        }
+    }
+    </style>
+
+    <!-- Main Header -->
+    <header class="main-header">
+
+        <!-- Row 1: Top Bar, logo left, contact right (desktop only) -->
+        <div class="header-top-bar">
+            <div class="container">
+                <figure class="top-bar-logo">
+                    <a href="/"><img src="/images/logo.png" alt="316 Health Insurance - Independent Health Insurance Broker in Wichita, KS"></a>
+                </figure>
+                <ul class="top-bar-info">
+                    <li class="tbi-phone">
+                        <i class="flaticon-phone-call tbi-icon"></i>
+                        <a href="tel:3162823440">(316) 282-3440</a>
+                    </li>
+                    <li class="tbi-email">
+                        <i class="flaticon-mail tbi-icon"></i>
+                        <a href="mailto:info@316healthins.com">info@316healthins.com</a>
+                    </li>
+                    <li class="tbi-hours">
+                        <i class="flaticon-clock tbi-icon"></i>
+                        <span>Mon &#8211; Fri 9am &#8211; 5pm</span>
+                    </li>
+                    <li class="tbi-btn">
+                        <a href="/contact/">Consultation<i class="flaticon-outcoming-object"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Row 2: Nav Bar, desktop: centered links | mobile: logo + hamburger -->
+        <div class="header-nav-bar">
+            <div class="container">
+                <nav class="main-menu navbar-expand-lg">
+                    <div class="navbar-header">
+                        <a class="mobile-nav-logo" href="/"><img src="/images/logo.png" alt="316 Health Insurance"></a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse clearfix">
+                        <ul class="navigation clearfix">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about/">About</a></li>
+                            <li class="dropdown"><a href="/services/">Services</a>
+                                <ul>
+                                    <li><a href="/medicare/">Medicare</a></li>
+                                    <li><a href="/aca-marketplace/">ACA / Marketplace</a></li>
+                                    <li><a href="/individual-family-health-insurance/">Individual &amp; Family</a></li>
+                                    <li><a href="/small-group-health-insurance/">Small Group</a></li>
+                                    <li><a href="/health-insurance-self-employed/">Self-Employed</a></li>
+                                    <li><a href="/cobra-turning-26/">COBRA &amp; Turning 26</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="/locations/">Locations</a>
+                                <ul>
+                                    <li><a href="/locations/wichita-ks/">Wichita, KS</a></li>
+                                    <li><a href="/locations/tulsa-ok/">Tulsa, OK</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/videos/">Videos</a></li>
+                            <li><a href="/reviews/">Testimonials</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Mobile contact strip (phone + CTA), hidden on desktop -->
+                <div class="mobile-contact-strip">
+                    <a href="tel:3162823440" class="mobile-phone-link"><i class="flaticon-phone-call"></i> (316) 282-3440</a>
+                    <a href="/contact/" class="theme-btn mobile-cta-btn">Consultation</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Header (compact: logo left, nav right-justified) -->
+        <div class="sticky-header">
+            <div class="container clearfix">
+                <figure class="nav-logo">
+                    <a href="/"><img src="/images/logo.png" alt="316 Health Insurance"></a>
+                </figure>
+                <div class="menu-area">
+                    <nav class="main-menu navbar-expand-lg">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about/">About</a></li>
+                                <li class="dropdown"><a href="/services/">Services</a>
+                                    <ul>
+                                        <li><a href="/medicare/">Medicare</a></li>
+                                        <li><a href="/aca-marketplace/">ACA / Marketplace</a></li>
+                                        <li><a href="/individual-family-health-insurance/">Individual &amp; Family</a></li>
+                                        <li><a href="/small-group-health-insurance/">Small Group</a></li>
+                                        <li><a href="/health-insurance-self-employed/">Self-Employed</a></li>
+                                        <li><a href="/cobra-turning-26/">COBRA &amp; Turning 26</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="/locations/">Locations</a>
+                                    <ul>
+                                        <li><a href="/locations/wichita-ks/">Wichita, KS</a></li>
+                                        <li><a href="/locations/tulsa-ok/">Tulsa, OK</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/videos/">Videos</a></li>
+                                <li><a href="/reviews/">Testimonials</a></li>
+                                <li><a href="/contact/">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- End Main Header -->
+
+
+
+    <!-- main-slider -->
+    <section class="main-slider slider-style-two hero-static">
+        <div class="slide">
+            <div class="slide-bg" style="background-image:url(/images/office/team-storefront-2026.jpg)"></div>
+            <div class="hero-gradient"></div>
+            <div class="container hero-container">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-7 hero-content">
+                        <div class="hero-headline">
+                            <div class="hero-hl-top">Health Insurance</div>
+                            <div class="hero-hl-sub">Doesn't Have To Be Hard.</div>
+                        </div>
+                        <div class="slider-btn"><a href="/contact/" class="theme-btn">Schedule Your Consultation<i class="flaticon-outcoming-object"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lower-content">
+            <div class="text">Ready to find the right health insurance? We can help!<i class="flaticon-check-form"></i></div>
+        </div>
+    </section>
+    <!-- main-slider end -->
+    <!-- stat counters -->
+    <section class="kg-stats-bar">
+        <div class="container">
+            <div class="kg-stats-inner">
+                <div class="kg-stat-item">
+                    <div class="kg-stat-number" data-target="1000" data-suffix="+" data-prefix="">1</div>
+                    <div class="kg-stat-label">Households Served</div>
+                </div>
+                <div class="kg-stat-divider"></div>
+                <div class="kg-stat-item">
+                    <div class="kg-stat-number" data-target="150" data-suffix="+" data-prefix="">1</div>
+                    <div class="kg-stat-label">Small Businesses Helped</div>
+                </div>
+                <div class="kg-stat-divider"></div>
+                <div class="kg-stat-item">
+                    <div class="kg-stat-number" data-target="2000000" data-suffix="+" data-prefix="$" data-start="1000000" data-display-mode="thousands">$1,000,000</div>
+                    <div class="kg-stat-label">in Claims Navigated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- stat counters end -->
+
+    <!-- hear-our-story / testimonials widget -->
+    <section id="kg-video-widget" style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="sec-title centred">
+                <h2>Hear the Story of Our Agency</h2>
+                <p style="font-size:17px; color:#555; margin-top:10px;">through the words of our clients</p>
+            </div>
+            <div class="row" id="kg-video-widget-grid" style="margin-top:40px; align-items:stretch;">
+                <!-- Populated dynamically from videos.json -->
+            </div>
+            <div style="text-align:center; margin-top:36px;">
+                <a href="/reviews/" style="font-size:16px; color:#2C4187; font-weight:700; text-decoration:none;">Hear more stories here &rarr;</a>
+            </div>
+        </div>
+    </section>
+    <!-- demystifying-health-insurance widget end -->
+
+    <style>
+    #kg-video-widget-grid .kgvw-card {
+        background:#fff;
+        border-radius:6px;
+        box-shadow:0 2px 12px rgba(0,0,0,.08);
+        overflow:hidden;
+        transition:box-shadow 0.2s,transform 0.2s;
+        display:flex;
+        flex-direction:column;
+        margin-bottom:24px;
+    }
+    #kg-video-widget-grid .kgvw-card:hover {
+        box-shadow:0 6px 24px rgba(0,0,0,.13);
+        transform:translateY(-2px);
+    }
+    .kgvw-thumb {
+        position:relative;
+        background:#000;
+        aspect-ratio:16/9;
+        overflow:hidden;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .kgvw-thumb img { width:100%;height:100%;object-fit:cover;object-position:center;display:block;pointer-events:none;position:absolute;inset:0; }
+    .kgvw-thumb-icon { font-size:40px;color:rgba(255,255,255,.4); }
+    .kgvw-play-overlay {
+        position:absolute;inset:0;
+        display:flex;align-items:center;justify-content:center;
+        background:rgba(0,0,0,.25);opacity:0;transition:opacity 0.2s;
+    }
+    #kg-video-widget-grid .kgvw-card:hover .kgvw-play-overlay { opacity:1; }
+    .kgvw-play-btn {
+        width:48px;height:48px;background:#2C4187;
+        border-radius:50%;display:flex;align-items:center;justify-content:center;
+    }
+    .kgvw-play-btn i { color:#fff;font-size:18px;margin-left:4px; }
+    .kgvw-body { padding:16px 18px 18px;flex:1;display:flex;flex-direction:column; }
+    .kgvw-title { font-size:15px;font-weight:700;color:#1a2a3a;margin-bottom:8px;line-height:1.3; }
+    .kgvw-desc { font-size:13px;color:#666;line-height:1.6;flex:1;margin-bottom:12px; }
+    .kgvw-link { font-size:13px;font-weight:700;color:#2C4187;text-decoration:none; }
+    .kgvw-link:hover { color:#2C4187; }
+    .kgvw-empty { text-align:center;padding:40px;color:#aaa;width:100%; }
+    .kgvw-thumb img.portrait { object-fit:contain; background:#2C4187; }
+    #kg-video-widget-grid { align-items: stretch; }
+    #kg-video-widget-grid > div { display: flex; }
+
+    /* Service card title — brand blue, hover darkens */
+    .service-section .service-block h4 a {
+        color: #2C4187;
+        text-decoration: none;
+    }
+    .service-section .service-block h4 a:hover {
+        color: #8C94C5 !important;
+        text-decoration: none;
+    }
+    </style>
+
+    <script>
+    (function() {
+        function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+        function shuffle(a) { for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+        fetch('/videos.json')
+            .then(function(r){return r.json();})
+            .then(function(data){
+                var videos = shuffle((Array.isArray(data)?data:[]).filter(function(v){return !v._note && (v.id && v.id.indexOf('testimonial') !== -1);})).slice(0,6);
+                var grid = document.getElementById('kg-video-widget-grid');
+                if(!videos.length){ grid.innerHTML='<p class="kgvw-empty">Videos coming soon.</p>'; return; }
+                grid.innerHTML = videos.map(function(v){
+                    var thumbSrc = v.thumbnail ? (v.thumbnail.startsWith('http') ? v.thumbnail : v.thumbnail) : '';
+                    var thumb = thumbSrc
+                        ? '<img src="'+thumbSrc+'" alt="'+escHtml(v.title)+'" onerror="this.parentNode.innerHTML=\'<i class=\"flaticon-video kgvw-thumb-icon\"></i>\'">'
+                        : '<i class="flaticon-video kgvw-thumb-icon"></i>';
+                    return '<div class="col-lg-4 col-md-6 col-sm-6"><a href="/videos/'+v.id+'/" class="kgvw-card"><div class="kgvw-thumb">'+thumb+'<div class="kgvw-play-overlay"><div class="kgvw-play-btn"><i class="fa fa-play"></i></div></div></div><div class="kgvw-body"><div class="kgvw-title">'+escHtml(v.title)+'</div><div class="kgvw-desc">'+escHtml(v.description||'')+'</div><span class="kgvw-link">Watch video &rarr;</span></div></a></div>';
+                }).join('');
+            })
+            .then(function(){ document.querySelectorAll('#kg-video-widget-grid .kgvw-thumb img').forEach(function(img){function c(){if(img.naturalHeight>img.naturalWidth)img.classList.add('portrait');}if(img.complete)c();else img.addEventListener('load',c);}); })
+            .catch(function(){ document.getElementById('kg-video-widget').style.display='none'; });
+    })();
+    </script>
+
+    <!-- welcome video -->
+    <section id="kg-welcome-video" style="padding: 80px 0; background: #fff;">
+        <div class="container">
+            <div class="sec-title centred">
+                <span>Who We Are</span>
+                <h2>Meet 316 Health Insurance</h2>
+                <p style="font-size:17px; color:#555; margin-top:10px;">A quick introduction to who we are, how we work, and why we do things differently.</p>
+            </div>
+            <div style="max-width:800px; margin:40px auto 0; border-radius:6px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.12); background:#000;">
+                <video controls preload="none"
+                    poster="/assets/video/thumbnails/316-intro-scrub-2_33s.jpg"
+                    style="width:100%; display:block;">
+                    <source src="https://pub-2fb808b7d1be460ea148e8acf26855db.r2.dev/introduction-video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+    <!-- welcome video end -->
+
+    <!-- welcome-section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="title-box centred">
+                <div class="sec-title">
+                    <span>About 316 Health Insurance</span>
+                    <h2>Local Offices. Nationwide Care.</h2>
+                    <div class="text">With offices in Kansas and Oklahoma, 316 Health Insurance serves clients in our own backyard — and beyond. We&rsquo;re licensed across the country, so wherever you are, you get the same local, personal service we&rsquo;re known for.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                    <div class="inner-box">
+                        <div class="inner-content">
+                            <i class="flaticon-insurance-2"></i>
+                            <h2>Independent Broker. Multiple Carriers. One Advocate.</h2>
+                        </div>
+                        <figure class="image-box image-one"><img src="/images/office/IMG_3954.jpg" alt="316 Health Insurance team in Wichita, Kansas"></figure>
+                        <figure class="image-box image-two"><img src="/images/office/wichita-office-session-28.jpg" alt="Health insurance consultation at 316 Health Insurance Wichita office"></figure>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                    <div class="content-box">
+                        <blockquote class="kg-pull-quote">What makes us different.</blockquote>
+                        <ul class="list">
+                            <li>We help solve problems, not just sell products.</li>
+                            <li>We design personalized health insurance strategies that work.</li>
+                            <li>We are local in Kansas and Oklahoma, but licensed across the country.</li>
+                            <li>We've been educating and empowering clients since 2003.</li>
+                            <li>We are bilingual and our team speaks English and Spanish.</li>
+                            <li>We give our clients sound advice regardless of commission.</li>
+                            <li>We walk with clients through every step of their healthcare journey.</li>
+                        </ul>
+                        <span class="kg-advocate-line">We work for you.</span>
+                        <div class="title"><h2 style="color:#2C4187;">Let Us Earn Your Trust.</h2></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- welcome-section end -->
+
+    <!-- services section -->
+    <section class="service-section" style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="sec-title centred">
+                <span>What We Do</span>
+                <h2>We Use Products to Build Strategies.</h2>
+                <div class="text">Our clients turn to us when they are tired of solving the same old problems the same old way. Instead, we help them self-discover a personalized strategy that actually works for them on the day they need it.</div>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div class="service-block" style="text-align:center; padding: 30px; background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,.07); height:100%;">
+                        <i class="flaticon-life-insurance" style="font-size:50px; color:#2C4187; display:block; margin-bottom:15px;"></i>
+                        <h4><a href="/medicare/">Medicare</a></h4>
+                        <p>Medicare Supplements (Medigap) and Part D prescription drug plans for individuals turning 65 or reviewing their current Medicare coverage.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div class="service-block" style="text-align:center; padding: 30px; background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,.07); height:100%;">
+                        <i class="flaticon-insurance" style="font-size:50px; color:#2C4187; display:block; margin-bottom:15px;"></i>
+                        <h4><a href="/aca-marketplace/">ACA / Marketplace</a></h4>
+                        <p>ACA Marketplace plans for individuals and families who don&rsquo;t have employer coverage. We help you find subsidies and enroll in the right plan.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div class="service-block" style="text-align:center; padding: 30px; background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,.07); height:100%;">
+                        <i class="flaticon-insurance-1" style="font-size:50px; color:#2C4187; display:block; margin-bottom:15px;"></i>
+                        <h4><a href="/individual-family-health-insurance/">Individual &amp; Family</a></h4>
+                        <p>Coverage tailored for individuals and families, including options outside the ACA Marketplace for those who need more flexibility.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div class="service-block" style="text-align:center; padding: 30px; background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,.07); height:100%;">
+                        <i class="flaticon-employee" style="font-size:50px; color:#2C4187; display:block; margin-bottom:15px;"></i>
+                        <h4><a href="/small-group-health-insurance/">Small Business</a></h4>
+                        <p>We help small and medium-sized businesses offer a health insurance package that&rsquo;s predictable for the employer&rsquo;s budget and provides real benefit for employees.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div class="service-block" style="text-align:center; padding: 30px; background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,.07); height:100%;">
+                        <i class="flaticon-insurance-2" style="font-size:50px; color:#2C4187; display:block; margin-bottom:15px;"></i>
+                        <h4><a href="/health-insurance-self-employed/">Self-Employed</a></h4>
+                        <p>Health coverage for freelancers, contractors, and solo professionals &mdash; focused on building a strategy that works when you need it, at a cost you can plan for.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div class="service-block" style="text-align:center; padding: 30px; background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,.07); height:100%;">
+                        <i class="flaticon-success" style="font-size:50px; color:#2C4187; display:block; margin-bottom:15px;"></i>
+                        <h4><a href="/cobra-turning-26/">COBRA &amp; Turning 26</a></h4>
+                        <p>Lost employer coverage or aging off a parent&rsquo;s plan? We walk through your real options so you don&rsquo;t overpay or end up without coverage.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div class="service-block" style="text-align:center; padding: 30px; background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,.07); height:100%;">
+                        <i class="flaticon-insurance" style="font-size:50px; color:#2C4187; display:block; margin-bottom:15px;"></i>
+                        <h4><a href="/services/">Christian Sharing Programs</a></h4>
+                        <p>Health Care Sharing Ministries (HCSMs) are faith-based alternatives to traditional insurance where members share each other&rsquo;s medical costs. Not insurance &mdash; but a powerful option for the right household.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div class="service-block" style="text-align:center; padding: 30px; background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,.07); height:100%;">
+                        <i class="flaticon-money" style="font-size:50px; color:#2C4187; display:block; margin-bottom:15px;"></i>
+                        <h4><a href="/services/">Medical Cost Sharing</a></h4>
+                        <p>Medical Cost Sharing (MCS) programs offer an alternative path to managing healthcare expenses &mdash; often at a lower monthly cost. We help you understand if it fits your overall strategy.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div class="service-block" style="text-align:center; padding: 30px; background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,.07); height:100%;">
+                        <i class="flaticon-support" style="font-size:50px; color:#2C4187; display:block; margin-bottom:15px;"></i>
+                        <h4><a href="/services/">Direct Primary Care</a></h4>
+                        <p>Direct Primary Care (DPC) is a membership model where you pay your doctor directly for unlimited primary care visits. Paired with the right coverage, it can dramatically reduce your overall healthcare costs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services section end -->
+
+    <!-- testimonials section -->
+    <section class="testimonial-section" style="padding: 80px 0; background: #fff;">
+        <div class="container">
+            <div class="sec-title centred">
+                <span>Client Reviews</span>
+                <h2>What Our Clients Say</h2>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div style="background:#f8f9fa; padding:30px; border-radius:4px; height:100%; border-left:4px solid #2C4187;">
+                        <div style="color:#2C4187; font-size:18px; margin-bottom:12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p style="font-size:15px; color:#444; font-style:italic; margin-bottom:16px;">"Jason and his team made health insurance actually understandable. I didn't feel pressured at all — just educated. Best decision I made was calling 316 Health."</p>
+                        <strong style="color:#2C4187;">— Alex B., Wichita KS</strong>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div style="background:#f8f9fa; padding:30px; border-radius:4px; height:100%; border-left:4px solid #2C4187;">
+                        <div style="color:#2C4187; font-size:18px; margin-bottom:12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p style="font-size:15px; color:#444; font-style:italic; margin-bottom:16px;">"We've used 316 Health for three years running. Every year they review our options and make sure we're still in the right plan. That's service you just don't find anymore."</p>
+                        <strong style="color:#2C4187;">— Heath &amp; Sandy, Wichita KS</strong>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                    <div style="background:#f8f9fa; padding:30px; border-radius:4px; height:100%; border-left:4px solid #2C4187;">
+                        <div style="color:#2C4187; font-size:18px; margin-bottom:12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p style="font-size:15px; color:#444; font-style:italic; margin-bottom:16px;">"As a small business owner, finding group coverage felt impossible. The 316 team walked us through everything and we found a plan that actually works for our whole team."</p>
+                        <strong style="color:#2C4187;">— Dr. Jeni E., Wichita KS</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonials section end -->
+
+    <!-- CTA -->
+    <section style="padding: 60px 0; background: #2C4187; text-align:center;">
+        <div class="container">
+            <h2 style="color:#fff; margin-bottom:15px;">Ready to Find the Right Coverage?</h2>
+            <p style="color:rgba(255,255,255,.85); margin-bottom:25px;">Schedule a free consultation with one of our licensed advisors in Kansas or Oklahoma.</p>
+            <a href="/contact/" class="kg-cta-btn">Schedule Your Consultation<i class="flaticon-outcoming-object" style="margin-left:11px;"></i></a>
+            <p style="color:rgba(255,255,255,.7); margin-top:15px; font-size:14px;">Or call: <a href="tel:3162823440" style="color:#fff;">(316) 282-3440</a></p>
+        </div>
+    </section>
+
+    <!-- main-footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="main-footer-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="about-widget footer-widget">
+                            <figure class="footer-logo" style="margin-bottom:20px;"><a href="/"><img src="/images/logo-white.png" alt="316 Health Insurance" style="width:200px; height:auto;"></a></figure>
+                            <div class="text">
+                                <p>Independent, local health insurance brokerage in Wichita and Tulsa, serving clients across the country. We educate and empower people to self-discover health insurance strategies that work, then walk with them through their journey. We serve individuals, families, the self-employed, Medicare recipients, and small businesses. Est. 2003.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                        <div class="explore-widget footer-widget">
+                            <h3 class="widget-title">Explore</h3>
+                            <ul class="link-list">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about/">About</a></li>
+                                <li><a href="/locations/wichita-ks/">Wichita, KS</a></li>
+                                <li><a href="/locations/tulsa-ok/">Tulsa, OK</a></li>
+                                <li><a href="/contact/">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="product-widget footer-widget">
+                            <h3 class="widget-title">Our Services</h3>
+                            <ul class="link-list">
+                                <li><a href="/medicare/">Medicare</a></li>
+                                <li><a href="/videos/">Video Library</a></li>
+                                <li><a href="/aca-marketplace/">ACA / Marketplace</a></li>
+                                <li><a href="/individual-family-health-insurance/">Individual &amp; Family</a></li>
+                                <li><a href="/small-group-health-insurance/">Small Group</a></li>
+                                <li><a href="/health-insurance-self-employed/">Self-Employed</a></li>
+                                <li><a href="/cobra-turning-26/">COBRA &amp; Turning 26</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="info-widget footer-widget">
+                            <h3 class="widget-title">Contact Us</h3>
+                            <div class="info-box">
+                                <div class="single-info">
+                                    <span>316 Health Insurance</span>
+                                    <div class="text"><a href="https://maps.google.com/?q=100+S+Main+St,+Suite+102,+Wichita,+KS+67202" target="_blank" rel="noopener" class="footer-map-link">100 S Main St, Suite 102<br>Wichita, KS</a></div>
+                                </div>
+                                <div class="single-info">
+                                    <span>Phone</span>
+                                    <div class="text"><a href="tel:3162823440">(316) 282-3440</a></div>
+                                </div>
+                                <div class="single-info">
+                                    <span>Email</span>
+                                    <div class="text"><a href="mailto:info@316healthins.com">info@316healthins.com</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+                <div class="copyright">Copyright &copy; <span id="footer-year"></span> <a href="/">316 Health Insurance</a>. All rights reserved. | Independent Licensed Insurance Broker | KS &amp; OK</div>
+                <ul class="social-style-one" style="margin:0;">
+                    <li><a href="https://www.facebook.com/316HealthInsurance" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/316healthins/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <style>.footer-map-link { color: inherit; text-decoration: none; }</style>
+    <!-- main-footer end -->
+
+    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+
+
+    <script>
+    (function() {
+      function animateCounter(el) {
+        var target      = parseInt(el.getAttribute('data-target'), 10);
+        var prefix      = el.getAttribute('data-prefix') || '';
+        var suffix      = el.getAttribute('data-suffix') || '';
+        var startVal    = parseInt(el.getAttribute('data-start') || '1', 10);
+        var displayMode = el.getAttribute('data-display-mode') || '';
+        var duration    = 1800;
+        var start       = null;
+
+        function easeOutQuart(t) {
+          return 1 - Math.pow(1 - t, 4);
+        }
+
+        function format(val) {
+          if (displayMode === 'thousands') {
+            var stepped = Math.round(val / 10000) * 10000;
+            return prefix + stepped.toLocaleString('en-US') + suffix;
+          }
+          return prefix + (val >= 1000 ? val.toLocaleString('en-US') : val) + suffix;
+        }
+
+        function step(timestamp) {
+          if (!start) start = timestamp;
+          var elapsed  = timestamp - start;
+          var progress = Math.min(elapsed / duration, 1);
+          var eased    = easeOutQuart(progress);
+          var current  = Math.floor(startVal + eased * (target - startVal));
+          el.textContent = format(current);
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = format(target);
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      var counters = document.querySelectorAll('.kg-stat-number');
+      var triggered = false;
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && !triggered) {
+            triggered = true;
+            setTimeout(function() {
+              counters.forEach(function(el) { animateCounter(el); });
+            }, 800);
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+
+      var section = document.querySelector('.kg-stats-bar');
+      if (section) observer.observe(section);
+    })();
+    </script>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/appear.js"></script>
+    <script src="/js/wow.js"></script>
+    <script src="/js/owl.js"></script>
+    <script src="/js/custom.js"></script>
+</body>
+</html>
+

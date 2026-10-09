@@ -1,0 +1,962 @@
+﻿/* ============================================================
+   316 Health Insurance â€” Custom Overrides
+   Applied after style.css. Fixes layout/UI issues specific
+   to this client's build. Do not edit style.css directly.
+   ============================================================ */
+
+/* ---- Welcome/About section layout fix ----
+   Remove absolutely positioned orange inner-content box
+   and the second overlapping image so heading, body text,
+   and photo have zero overlap.
+--------------------------------------------------------------- */
+.welcome-section .inner-box .inner-content {
+  display: none;
+}
+.welcome-section .inner-box .image-box.image-two {
+  display: none;
+}
+.welcome-section .inner-box .image-box.image-one {
+  margin: 0 !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,.12);
+}
+.welcome-section .inner-box img {
+  border-radius: 4px;
+}
+.welcome-section {
+  overflow: hidden;
+}
+.welcome-section .title-box {
+  position: relative;
+  z-index: 5;
+}
+
+/* ---- Logo size (header) ----
+   Constrain the header logo proportionally next to nav.
+--------------------------------------------------------------- */
+.main-header .left-column .logo-box img {
+  max-height: 60px;
+  max-width: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---- Sticky header â€” keep full wordmark ----
+   Use the full logo at reduced size (not icon-only swap).
+--------------------------------------------------------------- */
+.sticky-header .logo-box img {
+  max-height: 44px;
+  max-width: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---- Dark box in upper-left â€” template artifact ----
+   .left-column:before has a near-black bg extending 500000%.
+   Remove it so the header stays clean and white.
+--------------------------------------------------------------- */
+.main-header .left-column:before {
+  background-color: transparent !important;
+  display: none;
+}
+.main-header .left-column {
+  background: #ffffff;
+}
+
+/* ---- "Free Consultation" button row ----
+   Replace float:right on last li with flexbox so all four
+   header-top items stay on one horizontal row.
+--------------------------------------------------------------- */
+.main-header .right-column .header-top .top-info {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.main-header .right-column .header-top .top-info li {
+  float: none !important;
+  top: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.main-header .right-column .header-top .top-info li.btn-box {
+  margin-left: 24px;
+  padding: 0 !important;
+}
+
+/* ======================================================================
+   Hero: right-side gradient + Ken Burns + staggered fade-up
+   -----------------------------------------------------------------------
+   Layout intent:
+     Left 58% of the image  â†’ completely clear, advisor fully visible
+     Right 42% of the image â†’ gradient darkens right-to-center, text lives here
+
+   Layers (bottom â†’ top):
+     0  .slide-bg       â€” full-bleed bg image, runs Ken Burns
+     1  .hero-gradient  â€” right-only gradient pseudo-div
+     2  .hero-container â€” Bootstrap grid, text in col-lg-5.offset-lg-7
+   ====================================================================== */
+
+/* Slide base â€” remove template bg and full-width dark overlay */
+.main-slider.hero-static .slide {
+  position: relative;
+  overflow: hidden;
+  background: none !important;
+  height: 62vh;
+  min-height: 420px;
+  max-height: 640px;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+/* Remove ALL pseudo-element triangles (::before dark overlay, ::after white triangle) */
+.main-slider.hero-static .slide:before,
+.main-slider.hero-static .slide:after {
+  display: none !important;
+}
+/* Hide lower-content blue triangle block */
+.hero-static .lower-content {
+  display: none !important;
+}
+
+/* Ken Burns layer ---------------------------------------------------- */
+.slide-bg {
+  position: absolute;
+  inset: -6%;
+  background-size: cover;
+  background-position: 75% center;
+  background-repeat: no-repeat;
+  animation: kg-kenburns 10s ease-out forwards;
+  will-change: transform;
+  z-index: 0;
+}
+
+/* Right-side gradient ------------------------------------------------ */
+/* Starts transparent at left edge of div (=~58% of hero width),        */
+/* darkens progressively to right edge. Left side stays completely clear */
+.hero-gradient {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 55%;
+  background: linear-gradient(
+    to right,
+    transparent          0%,
+    rgba(8, 20, 45, 0.40) 30%,
+    rgba(8, 20, 45, 0.78) 70%,
+    rgba(8, 20, 45, 0.88) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Text container above gradient -------------------------------------- */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.main-slider.hero-static .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero text â€” right column ------------------------------------------- */
+.hero-content {
+  color: #fff;
+  padding-left: 20px;
+}
+.hero-content h4 {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: kg-fade-up 0.7s ease-out 0.3s forwards;
+}
+/* Two-tier headline â€” replaces h1 */
+.hero-headline {
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: kg-fade-up 0.7s ease-out 0.5s forwards;
+}
+.hero-hl-top {
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 6px;
+  font-family: inherit;
+}
+.hero-hl-sub {
+  font-size: clamp(22px, 2.6vw, 36px);
+  font-weight: 400;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.25;
+  font-family: inherit;
+}
+.hero-content .slider-btn {
+  opacity: 0;
+  animation: kg-fade-up 0.7s ease-out 0.75s forwards;
+}
+
+/* Keyframes ---------------------------------------------------------- */
+/* Ken Burns: drift RIGHT (positive translateX) â€” advisor on left comes into frame */
+@keyframes kg-kenburns {
+  0%   { transform: scale(1.0) translateX(0px); }
+  100% { transform: scale(1.06) translateX(-48px); }
+}
+@keyframes kg-fade-up {
+  0%   { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive: on mobile, text goes full-width (grid stacks naturally) */
+@media (max-width: 991px) {
+  .hero-gradient {
+    width: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(8, 20, 45, 0.80) 0%,
+      rgba(8, 20, 45, 0.40) 60%,
+      transparent 100%
+    );
+  }
+  .hero-content {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+/* Force other (non-hero) slider headings visible â€” WOW override ------ */
+.main-slider:not(.hero-static) h1,
+.main-slider:not(.hero-static) h2,
+.main-slider:not(.hero-static) h4 {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ---- CTA section button â€” white outline, always visible on blue background ---- */
+.kg-cta-btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 18px 38px;
+  background: transparent;
+  color: #ffffff !important;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: background 250ms ease, color 250ms ease;
+  cursor: pointer;
+}
+.kg-cta-btn:hover {
+  background: #ffffff;
+  color: #2C4187 !important;
+}
+
+/* ---- Footer: brand blue background, white text, periwinkle accents ----
+--------------------------------------------------------------- */
+.main-footer {
+  background: #2C4187 !important;
+}
+.main-footer .text,
+.main-footer p,
+.main-footer a,
+.main-footer .copyright,
+.main-footer .copyright a {
+  color: #ffffff !important;
+}
+.main-footer .widget-title {
+  color: #ffffff !important;
+}
+.main-footer .link-list li a {
+  color: rgba(255,255,255,0.85) !important;
+}
+.main-footer .link-list li a:hover {
+  color: rgba(255,255,255,1) !important;
+}
+.main-footer .single-info span {
+  color: rgba(255,255,255,0.6) !important;
+}
+.main-footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.main-footer .social-style-one li a {
+  background: rgba(255,255,255,0.12) !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.2) !important;
+}
+.main-footer .social-style-one li a:hover {
+  background: rgba(255,255,255,0.25) !important;
+  border-color: rgba(255,255,255,0.4) !important;
+}
+.footer-map-link:hover { color: rgba(255,255,255,1) !important; }
+
+/* ---- Footer top row removed â€” logo now in left column ----
+   Hide any remnant footer-top layout if present.
+--------------------------------------------------------------- */
+.footer-top {
+  display: none;
+}
+
+/* ---- Footer bottom â€” flex layout for copyright + social ----
+--------------------------------------------------------------- */
+.footer-bottom .social-style-one {
+  display: inline-flex;
+  gap: 6px;
+}
+.footer-bottom .social-style-one li {
+  display: inline-block;
+  margin-right: 0;
+}
+
+/* ---- Page title banner overlay â€” brand navy ----
+   style.css uses rgba(26,30,31,0.60) dark gray. Override to logo navy.
+--------------------------------------------------------------- */
+.page-title:before {
+  background: rgba(8, 20, 45, 0.68) !important;
+}
+
+/* ---- Brand color: replace teal accent with logo blue ----
+   #008391 replaced sitewide in style.css with #2C4187.
+   Any custom components referencing old teal are caught here.
+--------------------------------------------------------------- */
+.theme-btn {
+  background: #2C4187 !important;
+  border-color: #2C4187 !important;
+  border-radius: 8px !important;
+}
+.theme-btn:hover {
+  background: #1E3070 !important;
+  border-color: #1E3070 !important;
+}
+
+
+/* ===== POWER STATEMENTS ============================================== */
+
+/* Hero: supporting tagline beneath headline */
+.hero-power-line {
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 500;
+  color: rgba(255,255,255,0.72);
+  letter-spacing: 0.04em;
+  margin-bottom: 22px;
+  font-style: italic;
+  opacity: 0;
+  animation: kg-fade-up 0.7s ease-out 0.62s forwards;
+}
+
+/* Pull quote: bold brand statement in content sections */
+.kg-pull-quote {
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 700;
+  color: #2C4187;
+  border-left: 4px solid #2C4187;
+  padding: 10px 0 10px 18px;
+  margin: 22px 0 16px;
+  line-height: 1.3;
+}
+
+/* Small advocate line: orange accent, uppercase */
+.kg-advocate-line {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2C4187;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Section power sub-line: accent beneath section intro text */
+.kg-section-power {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2C4187;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+/* Trust bar strip */
+.kg-trust-bar {
+  background: #2C4187;
+  padding: 30px 0;
+}
+.kg-trust-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.kg-trust-item {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  padding: 6px 36px;
+}
+.kg-trust-divider {
+  color: rgba(255,255,255,0.30);
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+}
+@media (max-width: 767px) {
+  .kg-trust-divider { display: none; }
+  .kg-trust-item { width: 100%; text-align: center; padding: 8px 16px; }
+}
+
+/* Confused callout: intro statement in why-choose */
+.kg-section-callout {
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 600;
+  color: #1a2a3a;
+  margin-bottom: 22px;
+  line-height: 1.4;
+}
+
+/* Service area local tagline */
+.kg-local-tagline {
+  font-size: clamp(16px, 1.6vw, 19px);
+  font-weight: 700;
+  color: #2C4187;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Closing power statement: above section CTA */
+.kg-power-closing {
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 600;
+  color: #2C4187;
+  margin-bottom: 24px;
+  font-style: italic;
+  display: block;
+}
+
+/* FAQ power subheading */
+.kg-faq-power {
+  font-size: clamp(15px, 1.5vw, 18px);
+  color: #666;
+  font-style: italic;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+
+/* ===== TYPOGRAPHY SYSTEM: DM Serif Display + DM Sans ================ */
+/* Load: Google Fonts link in _partials/header.html                      */
+
+/* H1, H2 â€” DM Serif Display (display serif for impactful headlines) */
+h1,
+h2 {
+  font-family: 'DM Serif Display', serif !important;
+}
+
+/* Everything else â€” DM Sans (clean, neutral, readable at any size) */
+body,
+h3, h4, h5, h6,
+p, li, span, div,
+a, button,
+input, textarea, select, label,
+.navigation a,
+.main-menu,
+.theme-btn,
+.sec-title,
+.sec-title span,
+.accordion-box,
+.footer-widget,
+.main-footer,
+blockquote,
+.form-group,
+table, th, td {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Preserve icon fonts â€” these must NOT be overridden */
+/* Flaticon */
+[class^="flaticon-"]::before,
+[class*=" flaticon-"]::before,
+[class^="flaticon-"]::after,
+[class*=" flaticon-"]::after {
+  font-family: 'Flaticon' !important;
+}
+/* Font Awesome 5 â€” the global `span/i { font-family: DM Sans !important }` rule above
+   clobbers FA icon rendering. Fix both the element AND ::before so glyphs render. */
+.fa, .fas, .far, .fal, .fad,
+i.fa, i.fas, i.far, i.fal,
+span.fa, span.fas, span.far {
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900 !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+}
+.fab, i.fab, span.fab {
+  font-family: 'Font Awesome 5 Brands' !important;
+  font-weight: 400 !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+}
+.fa::before, .fas::before, .far::before, .fal::before {
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900 !important;
+}
+.fab::before {
+  font-family: 'Font Awesome 5 Brands' !important;
+  font-weight: 400 !important;
+}
+/* ===== END TYPOGRAPHY SYSTEM ======================================== */
+
+/* ===== HERO HEADLINE â€” explicit DM Serif Display =====================
+   .hero-hl-top and .hero-hl-sub are <div> elements (not h1/h2).
+   The h1/h2 rule doesn't reach them; target them directly.
+   Must outweigh the inherit rule in the header partial <style> block.
+================================================================== */
+.main-slider .hero-headline .hero-hl-top,
+.main-slider .hero-headline .hero-hl-sub {
+  font-family: 'DM Serif Display', serif !important; /* hero-hl-top DM Serif fix */
+}
+
+
+/* ===== ROUND 4 FIXES ================================================= */
+
+/* FIX 1 â€” About section image: fill full column height */
+.welcome-section .row {
+  align-items: stretch;
+}
+.welcome-section .image-column .inner-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.welcome-section .image-box.image-one {
+  flex: 1;
+  margin: 0;
+  overflow: hidden;
+}
+.welcome-section .image-box.image-one img {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+.welcome-section .image-box.image-two {
+  display: none;
+}
+/* Keep inner-content (icon badge) layered on top */
+.welcome-section .inner-content {
+  position: absolute;
+  z-index: 2;
+}
+
+/* FIX 3 â€” About section: full-width paragraph paragraph style */
+.about-full-para {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #555;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* FIX 4 â€” Checklist items: replace beige (#f4f3f0) with white + shadow */
+.list li {
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07) !important;
+  border: 1px solid #e8eaee !important;
+}
+
+/* FIX 6 â€” FAQ accordion: center container with max-width */
+.accordion-box {
+  max-width: 800px;
+  margin: 0 auto !important;
+}
+
+/* FIX 7 â€” Footer Contact Us: tighten vertical spacing */
+.info-widget .info-box .single-info {
+  margin-bottom: 8px !important;
+  padding-bottom: 0 !important;
+}
+.info-widget .info-box .single-info span {
+  font-size: 11px !important;
+  margin-bottom: 2px !important;
+  display: block;
+}
+.info-widget .info-box .single-info .text {
+  margin-bottom: 0 !important;
+}
+
+/* ===== END ROUND 4 FIXES ============================================= */
+
+/* ===== SERVICES HUB PAGE ============================================= */
+
+/* Service card: hub page grid cards */
+.service-card-hub {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  border: 1px solid #e8eaee;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.service-card-hub:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+.service-card-hub-icon {
+  font-size: 48px;
+  color: #2C4187;
+  display: block;
+  margin-bottom: 18px;
+}
+.service-card-hub-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+.service-card-hub-title a {
+  color: #1a2a3a;
+  text-decoration: none;
+}
+.service-card-hub-title a:hover {
+  color: #2C4187;
+}
+.service-card-hub-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 18px;
+}
+.service-card-hub-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2C4187;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  margin-top: auto;
+}
+.service-card-hub-link:hover {
+  color: #2C4187;
+  text-decoration: none;
+}
+
+/* Services hub: bottom CTA band */
+.kg-services-cta {
+  background: #2C4187;
+  padding: 60px 0;
+}
+.kg-services-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.kg-services-cta-heading {
+  font-size: clamp(22px, 2.5vw, 30px);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+.kg-services-cta .theme-btn {
+  background: transparent !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.kg-services-cta .theme-btn:hover {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #2C4187 !important;
+}
+@media (max-width: 767px) {
+  .kg-services-cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ===== END SERVICES HUB PAGE ========================================= */
+
+
+/* ===== MOBILE FIXES ================================================== */
+
+/* Mobile-only elements: hidden on desktop */
+.mobile-nav-logo,
+.mobile-contact-strip {
+  display: none;
+}
+
+/* ---- Breakpoint: tablet + mobile (< 992px) ---- */
+@media (max-width: 991px) {
+
+  /* Hide the desktop top bar entirely â€” replaced by mobile header */
+  .header-top-bar {
+    display: none !important;
+  }
+
+  /* Nav bar: stack rows vertically, full width */
+  .header-nav-bar .container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .header-nav-bar .main-menu,
+  .header-nav-bar nav.main-menu {
+    width: 100%;
+  }
+
+  /* Row 1: Navbar-header â€” mobile logo LEFT, hamburger RIGHT */
+  .header-nav-bar .navbar-header {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 16px;
+    background: #fff;
+  }
+
+  /* Mobile logo: show on mobile, hidden on desktop */
+  .mobile-nav-logo {
+    display: block;
+    line-height: 1;
+  }
+  .mobile-nav-logo img {
+    max-height: 42px;
+    width: auto;
+    display: block;
+  }
+
+  /* Hamburger button: clean navy lines, no orange background, 44px tap target */
+  .main-menu .navbar-header .navbar-toggle {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 6px !important;
+    width: 44px;
+    height: 44px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .main-menu .navbar-header .navbar-toggle .icon-bar {
+    background: #2C4187 !important;
+    height: 2px !important;
+    width: 24px !important;
+    display: block !important;
+    margin: 0 !important;
+    border-radius: 1px;
+  }
+
+  /* Row 2: Mobile contact strip â€” phone left, CTA right */
+  .mobile-contact-strip {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 16px;
+    background: #f5f6f7;
+    border-top: 1px solid #e0e2e5;
+  }
+  .mobile-phone-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a2a3a;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mobile-phone-link i {
+    color: #2C4187;
+    font-size: 14px;
+  }
+  .mobile-phone-link:hover { color: #2C4187; }
+  .mobile-cta-btn {
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Mobile nav dropdown: brand navy, clean stacked links */
+  .main-menu .navbar-collapse > .navigation {
+    background: #1a2a3a !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    max-height: none !important;
+  }
+  .main-menu .navbar-collapse > .navigation > li {
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  }
+  .main-menu .navbar-collapse > .navigation > li > a {
+    color: #ffffff !important;
+    font-size: 15px !important;
+    padding: 14px 20px !important;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .main-menu .navbar-collapse > .navigation > li > a:hover {
+    color: #2C4187 !important;
+    background: rgba(255,255,255,0.05) !important;
+  }
+  /* Submenu items */
+  .main-menu .navbar-collapse > .navigation > li > ul {
+    background: #111d2b !important;
+  }
+  .main-menu .navbar-collapse > .navigation > li > ul > li > a {
+    color: rgba(255,255,255,0.75) !important;
+    font-size: 14px !important;
+    padding: 11px 20px 11px 32px !important;
+  }
+  .main-menu .navbar-collapse > .navigation > li > ul > li > a:hover {
+    color: #2C4187 !important;
+  }
+}
+
+/* ---- Mobile heading sizes: split the difference (original â†’ my reduction) ---- */
+@media (max-width: 991px) {
+  h1 { font-size: clamp(30px, 7vw, 42px) !important; }
+  h2 { font-size: clamp(26px, 6vw, 36px) !important; }
+  h3 { font-size: clamp(20px, 5vw, 28px) !important; }
+  .sec-title h2 { font-size: clamp(26px, 6vw, 36px) !important; }
+  .page-title h1 { font-size: clamp(28px, 7vw, 40px) !important; }
+}
+
+/* ---- Mobile nav dropdown: clean CSS caret on the anchor, not the injected btn ---- */
+@media (max-width: 991px) {
+  /* Hide the JS-injected dropdown-btn div entirely */
+  .main-header .navigation li.dropdown .dropdown-btn {
+    display: none !important;
+  }
+  /* Add caret directly to the <a> so it's always on the same line as the text */
+  .main-header .navigation > li.dropdown > a {
+    padding-right: 48px;
+  }
+  .main-header .navigation > li.dropdown > a::after {
+    content: '';
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid rgba(255,255,255,0.8);
+    border-bottom: 2px solid rgba(255,255,255,0.8);
+  }
+}
+
+/* ---- Breakpoint: mobile only (< 768px) ---- */
+@media (max-width: 767px) {
+
+  /* Hero focal point â€” show building sign at top, faces in middle on mobile */
+  .hero-static .slide-bg {
+    background-position: 50% 20% !important;
+  }
+
+  /* Anchor hero content to bottom so team faces are visible above */
+  .main-slider.hero-static .slide {
+    align-items: flex-end !important;
+    padding-bottom: 28px !important;
+    padding-top: 0 !important;
+  }
+
+  /* Hero text: stack vertically, ensure readability */
+  .hero-content {
+    padding: 0 16px !important;
+  }
+  .hero-hl-top {
+    font-size: clamp(34px, 9vw, 52px) !important;
+  }
+  .hero-hl-sub {
+    font-size: clamp(18px, 5vw, 28px) !important;
+  }
+  .hero-power-line {
+    font-size: 14px !important;
+  }
+
+  /* Remove hero right-side column offset on mobile â€” go full width */
+  .hero-container .offset-lg-7,
+  .hero-container .col-lg-5 {
+    margin-left: 0 !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Hero height on mobile */
+  .main-slider.hero-static .slide {
+    min-height: 520px !important;
+    height: 70vh !important;
+  }
+}
+
+/* ===== END MOBILE FIXES ============================================== */
+
+
+/* Stat counters - homepage trust bar replacement */
+.kg-stats-bar {
+  background: #2C4187;
+  padding: 18px 0;
+}
+.kg-stats-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.kg-stat-item {
+  flex: 1 1 180px;
+  text-align: center;
+  padding: 8px 24px;
+}
+.kg-stat-number {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(22px, 2.8vw, 36px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.kg-stat-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(9px, 0.9vw, 11px);
+  font-weight: 700;
+  color: rgba(255,255,255,0.80);
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+}
+.kg-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.25);
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .kg-stats-bar { padding: 12px 0; }
+  .kg-stat-divider { display: none; }
+  .kg-stat-item { flex: 1 1 100%; padding: 10px 20px; border-bottom: 1px solid rgba(255,255,255,0.15); }
+  .kg-stat-item:last-child { border-bottom: none; }
+}
